@@ -20,7 +20,7 @@
 				// | SHIFT |  Z   |  X   |  C   |  V   |  B   |   N   |  M    |  ,   |  .   |   /   |  BSPC |
 				// | FN    | LGUI | LALT | LCTL | LOWR | SPACE| RETURN|  RAIS | LARW | DARW | UARW  |  RARW |
 			bindings = <
-				&kp TAB  &kp Q    &kp W 	&kp F 	&kp P 	&kp B  &kp J   	&kp L  &kp U     &kp Y    &kp SEMI &kp MINUS
+				&kp TAB			&kp Q    &kp W 	&kp F 	&kp P 	&kp B  &kp J   	&kp L  &kp U     &kp Y    &kp SEMI &kp MINUS
 				&kp ESC  &kp A    &kp R 	&kp S 	&kp T 	&kp G  &kp M   	&kp N  &kp E     &kp I    &kp O    &kp SQT
 				&kp LSHFT &kp Z   &kp X 	&kp C 	&kp D 	&kp B  &kp N   	&kp H  &kp COMMA &kp DOT  &kp BSLH &kp BSPC
 				&kp DEL   &kp LGUI &kp LALT  &kp LCTRL &mo 1 &kp SPACE &kp RET &mo 2 &kp LEFT  &kp DOWN &kp UP   &kp RIGHT
