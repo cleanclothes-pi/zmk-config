@@ -11,16 +11,6 @@
 // Define Layers
 
 / {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping_term_ms = <150>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
 
 	keymap {
 		compatible = "zmk,keymap";
@@ -35,9 +25,9 @@
 
 			bindings = <
 				&kp TAB   &kp Q    	  &kp W 	  &kp F 	   &kp P  		&kp B      	 &kp J    &kp L  		&kp U     	 &kp Y    	&kp SEMI    &kp BSPC
-				&kp ESC   &hm LALT A  &hm LGUI R  &hm LSHFT S  &hm LCTRL T  &kp G      	 &kp M    &hm LCRTL N  	&hm LSHFT E  &hm LGUI I &hm LALT O  &kp SQT
+				&kp ESC   &kp A  	  &hm R  	  &kp S  	   &kp t	    &kp G      	 &kp M    &kp N  		&kp E  		 &kp I 		&kp O  		&kp SQT
 				&kp LSHFT &kp Z    	  &kp X 	  &kp C 	   &kp D  		&kp V      	 &kp K    &kp H 		&kp COMMA 	 &kp DOT    &kp BSLH    &kp RET
-				&kp TAB   &kp LGUI    &kp LALT    &kp LCTRL    &kp TAB  &lt 1 SPACE    &lt 2 RET &kp BSPC  &kp LEFT  	 &kp DOWN   &kp UP      &kp RIGHT
+				&kp TAB   &kp LGUI    &kp LALT    &kp LCTRL    &kp TAB   &lt 1 SPACE   &lt 2 RET  &kp BSPC  	&kp LEFT  	 &kp DOWN   &kp UP      &kp RIGHT
 			>;
 		};
 
