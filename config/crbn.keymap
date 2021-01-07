@@ -10,11 +10,6 @@
 
 // Define Layers
 
-#define DEFAULT	0
-#define _NN		1
-#define _SYM	2
-#define _ADJ	3
-
 / {
     behaviors {
         hm: homerow_mods {
@@ -42,7 +37,7 @@
 				&kp TAB   &kp Q    	  &kp W 	  &kp F 	   &kp P  		&kp B      	 &kp J    &kp L  		&kp U     	 &kp Y    	&kp SEMI    &kp BSPC
 				&kp ESC   &hm LALT A  &hm LGUI R  &hm LSHFT S  &hm LCTRL T  &kp G      	 &kp M    &hm LCRTL N  	&hm LSHFT E  &hm LGUI I &hm LALT O  &kp SQT
 				&kp LSHFT &kp Z    	  &kp X 	  &kp C 	   &kp D  		&kp V      	 &kp K    &kp H 		&kp COMMA 	 &kp DOT    &kp BSLH    &kp RET
-				&kp TAB   &kp LGUI    &kp LALT    &kp LCTRL    &kp TAB  &lt _NN SPACE    &lt _SYM RET &kp BSPC  &kp LEFT  	 &kp DOWN   &kp UP      &kp RIGHT
+				&kp TAB   &kp LGUI    &kp LALT    &kp LCTRL    &kp TAB  &lt 1 SPACE    &lt 2 RET &kp BSPC  &kp LEFT  	 &kp DOWN   &kp UP      &kp RIGHT
 			>;
 		};
 
