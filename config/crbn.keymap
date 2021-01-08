@@ -32,7 +32,7 @@
 				// | FN    | LGUI | LALT | LCTL | LOWR | SPACE|| RETURN|  RAIS | LARW | DARW | UARW  |  RARW |
 			bindings = <
 				&kp TAB	 &kp Q    &kp W 	&kp F 	&kp P 	&kp B  &kp J   	&kp L  &kp U     &kp Y    &kp SEMI &kp MINUS
-				&kp ESC  &hm LCTRL A    &kp R 	&kp S 	&kp T 	&kp G  &kp M   	&kp N  &kp E     &kp I    &kp O    &kp SQT
+				&kp ESC  &hm LALT A    &hm LGUI R 	&hm LSHFT S 	&hm LCTRL T 	&kp G  &kp M   	&hm LCTRL N  &hm LSHFT E     &hm LGUI I    &hm LALT O    &kp SQT
 				&kp LSHFT &kp Z   &kp X 	&kp C 	&kp D 	&kp V  &kp K   	&kp H  &kp COMMA &kp DOT  &kp FSLH &kp BSPC
 				&kp DEL   &kp LGUI &kp LALT  &kp LCTRL &kp TAB &lt 1 SPACE &lt 2 RET &kp BSPC &kp LEFT  &kp DOWN &kp UP   &kp RIGHT
 			>;
