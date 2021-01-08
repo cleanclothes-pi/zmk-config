@@ -15,10 +15,10 @@
 	// [0] DEFAULT = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 		default_layer {
 				// -----------------------------------------------------------------------------------------
-				// |  TAB  |  Q   |  W   |  F   |  P   |  B   |   J   |  L    |  U   |  Y   |   ;   |  -  	|
-				// |  ESC  |  A   |  S   |  D   |  F   |  G   |   H   |  J    |  K   |  L   |   ;   |  '    |
-				// | SHIFT |  Z   |  X   |  C   |  V   |  B   |   N   |  M    |  ,   |  .   |   /   |  BSPC |
-				// | FN    | LGUI | LALT | LCTL | LOWR | SPACE| RETURN|  RAIS | LARW | DARW | UARW  |  RARW |
+				// |  TAB  |  Q   |  W   |  F   |  P   |  B   ||   J   |  L    |  U   |  Y   |   ;   |  -  	|
+				// |  ESC  |  A   |  S   |  D   |  F   |  G   ||   H   |  J    |  K   |  L   |   ;   |  '    |
+				// | SHIFT |  Z   |  X   |  C   |  V   |  B   ||   N   |  M    |  ,   |  .   |   /   |  BSPC |
+				// | FN    | LGUI | LALT | LCTL | LOWR | SPACE|| RETURN|  RAIS | LARW | DARW | UARW  |  RARW |
 			bindings = <
 				&kp TAB	 &kp Q    &kp W 	&kp F 	&kp P 	&kp B  &kp J   	&kp L  &kp U     &kp Y    &kp SEMI &kp MINUS
 				&kp ESC  &kp A    &kp R 	&kp S 	&kp T 	&kp G  &kp M   	&kp N  &kp E     &kp I    &kp O    &kp SQT
@@ -50,11 +50,16 @@
 
 	// [3] CONTROL = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	control {
+			// ----------------------------------------------------------------------------------------+
+			// |BT_CLR| ____ | prof1| prof2| prof3| ____ || ____ | _____ | _____ | _____ | ____ | ____ |
+			// |RESET | ____ | prof4| prof5| ____ | ____ || ____ | _____ | _____ | _____ | ____ | ____ |
+			// |BOOTLD| ____ | ____ | ____ | ____ | ____ || ____ | _____ | _____ | _____ | ____ | ____ |
+			// |      | ____ | ____ | ____ | ____ | ____ || ____ | _____ | _____ | _____ | ____ | ____ |
 		bindings = <
-			&reset &bootloader &bt BT_CLR &bt BT_PRV &bt BT_NXT &trans &trans &trans &trans &trans &trans &trans
-			&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-			&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-			&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+			&bt BT_CLR 	&trans 	&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans 		&trans &trans &trans &trans &trans &trans
+			&reset 		&trans 	&bt BT_SEL 3 &bt BT_SEL 4 &trans 	   &trans 		&trans &trans &trans &trans &trans &trans
+			&bootloader &trans 	&trans 		 &trans 	  &trans 	   &trans 		&trans &trans &trans &trans &trans &trans
+			&trans 		&trans 	&trans 		 &trans 	  &trans       &trans 		&trans &trans &trans &trans &trans &trans
 		>;
 	};
 
