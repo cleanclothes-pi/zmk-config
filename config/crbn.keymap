@@ -41,21 +41,31 @@
 	// [1] LOWER = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 
     lower {
+			// --------------------------------------------------------------------------------------------------+
+			// |   ~   |   !   |   @   |   #   |   $   |   %   ||   ^   |   &   |   *   |   (   |   )   |   DEL  |
+			// |  DEL  |   F1  |   F2  |   F3  |   F4  |   F5  ||   F6  |   _   |   +   |   <   |   >   |    |   |
+			// |  ____ |   F7  |   F8  |   F9  |   F10 |   F11 ||   F12 |   #   |   \   |  HOME |  END  |  ____  |
+			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ || _CTRL |  ____ |  Next |  VolD |  VolUp|  Pause |
 			bindings = <
-				&kp LS(GRAVE) &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0) &kp DEL
-				&kp DEL &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp UNDER &kp PLUS &kp LT &kp GT &kp PIPE
-				&trans &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp LS(HASH) &kp LS(BSLH) &kp HOME &kp END &trans
-				&trans &trans &trans &trans &trans &trans &mo 3 &trans &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
+				&kp LS(GRAVE) &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) 	&kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0) &kp DEL
+				&kp DEL &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 								&kp F6 &kp UNDER &kp PLUS &kp LT &kp GT &kp PIPE
+				&trans &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 							&kp F12 &kp LS(HASH) &kp LS(BSLH) &kp HOME &kp END &trans
+				&trans &trans &trans &trans &trans &trans	 							&mo 3 &trans &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
 			>;
     };
 
 	// [2] RAISE = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
     raise {
+			// --------------------------------------------------------------------------------------------------+
+			// |   `   |   1   |   2   |   3   |   4   |   5   ||   6   |   7   |   8   |   9   |   0   |   BSPC |
+			// |  DEL  |   F1  |   F2  |   F3  |   F4  |   F5  ||   F6  |   _   |   +   |   <   |   >   |    |   |
+			// |  ____ |   F7  |   F8  |   F9  |   F10 |   F11 ||   F12 |   #   |   \   |  HOME |  END  |  ____  |
+			// |  ____ |  ____ |  ____ |  ____ |  ____ | _CTRL ||  ____ |  ____ |  Next |  VolD |  VolUp|  Pause |
 			bindings = <
-				&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSPC
-				&kp DEL &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH
-				&trans &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp HASH &kp BSLH &kp PG_UP &kp PG_DN &trans
-				&trans &trans &trans &trans &trans &mo 3 &trans &trans &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
+				&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 	&kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSPC
+				&kp DEL &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 		&kp F6 &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH
+				&trans &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 	&kp F12 &kp HASH &kp BSLH &kp PG_UP &kp PG_DN &trans
+				&trans &trans &trans &trans &trans &mo 3 		&trans &trans &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
     	>;
     };
 
@@ -65,7 +75,7 @@
 			// |BT_CLR| ____ | prof1| prof2| prof3| ____ || ____ | _____ | _____ | _____ | ____ | ____ |
 			// |RESET | ____ | prof4| prof5| ____ | ____ || ____ | _____ | _____ | _____ | ____ | ____ |
 			// |BOOTLD| ____ | ____ | ____ | ____ | ____ || ____ | _____ | _____ | _____ | ____ | ____ |
-			// |      | ____ | ____ | ____ | ____ | ____ || ____ | _____ | _____ | _____ | ____ | ____ |
+			// | ____ | ____ | ____ | ____ | ____ | ____ || ____ | _____ | _____ | _____ | ____ | ____ |
 		bindings = <
 			&bt BT_CLR 	&trans 	&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans 		&trans &trans &trans &trans &trans &trans
 			&reset 		&trans 	&bt BT_SEL 3 &bt BT_SEL 4 &trans 	   &trans 		&trans &trans &trans &trans &trans &trans
