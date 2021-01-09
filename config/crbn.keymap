@@ -30,7 +30,7 @@
 				// |  ESC  |  A   |  S   |  D   |  F   |  G   ||   M   |  N    |  E   |  I   |   O   |   '   |
 				// |   (   |  Z   |  X   |  C   |  V   |  B   ||   K   |  M    |  ,   |  .   |   /   |   )   |
 				// |-----------------------------------------------------------------------------------------|
-				// | D_PW  | PW   | ____ | ____ | TAB/4| SPC/1|| RET/2 | BPSC  | DEL  | ____ |  NW   |  D_NW |
+				// | D_PW  | PW   | ____ | ____ | TAB/4| SPC/2|| RET/1 | BPSC  | DEL  | ____ |  NW   |  D_NW |
 				// ==========================================================================================+
 			bindings = <
 				&kp CAPS  &kp Q    	 &kp W 		 &kp F 		  &kp P 	   &kp B  		&kp J      &kp L  	&kp U     &kp Y    &kp SEMI &kp MINUS
@@ -47,7 +47,9 @@
 			// |  ____ |   +   |   1   |   2   |   3   |   -   ||   :   |   ^   |   #   |   %   |   $   |  ____  |
 			// |   ~   |   .   |   4   |   5   |   6   |   0   ||   *   |   =   |   !   |   @   |   &   |    |   |
 			// |  ____ |   ,   |   7   |   8   |   9   |  ____ ||  ____ |   `   |   <   |   >   |   \   |  ____  |
+			// |-------------------------------------------------------------------------------------------------|
 			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
+			// ==================================================================================================+
 			bindings = <
 				&trans    &kp KP_PLUS  &kp KP_N1  &kp KP_N2	 &kp KP_N3  &kp KP_MINUS     &kp COLON	&kp CARET	&kp HASH	&kp PRCNT	&kp DLLR	&trans
 				&kp TILDE &kp DOT	   &kp KP_N4  &kp KP_N5	 &kp KP_N6	&kp KP_N0	     &kp STAR	&kp EQUAL	&kp EXCL	&kp AT		&kp AMPS	&kp PIPE
@@ -57,18 +59,20 @@
     };
 
 	// [2] RAISE = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-    raise {
+    nav {
 			// --------------------------------------------------------------------------------------------------+
-			// |   `   |    +  |   1   |   2   |   3   |       ||   6   |   7   |   8   |   9   |   0   |   BSPC |
-			// |  DEL  |   .   |   4   |   5   |   6   |   0   ||   F6  |   _   |   +   |   <   |   >   |    |   |
-			// |  ____ |       |   7   |   8   |   9   |       ||   F12 |   #   |   \   |  HOME |  END  |  ____  |
-			// |  ____ |  ____ |  ____ |  ____ |  ____ | _CTRL ||  ____ |  ____ |  Next |  VolD |  VolUp|  Pause |
+			// |  ____ |  HOME |  D_PW |  S_PW |   PW  |  PG_T || PG_UP |   NW  |  S_NW |  D_NW |  END  |  ____  |
+			// |  ____ |   <   |   (   |   {   |   [   |  PG_B || PG_DN |  LEFT |  DOWN |   UP  | RIGHT |  ____  |
+			// |  ____ |   >   |   )   |   }   |   ]   |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
+			// |-------------------------------------------------------------------------------------------------|
+			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
+			// ==================================================================================================+
 			bindings = <
-				&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 	&kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSPC
-				&kp DEL &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 		&kp F6 &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH
-				&trans &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 	&kp F12 &kp HASH &kp BSLH &kp PG_UP &kp PG_DN &trans
-				&trans &trans &trans &trans &trans &mo 3 		&trans &trans &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
-    	>;
+				&trans &kp HOME	&kp LC(BSPC)	&kp LC(LS(LEFT))	&kp LC(LEFT)	&kp LC(HOME)	&kp PG_UP	&kp LC(RIGHT)	&kp LS(LC(RIGHT))	&kp LC(DEL)	&kp END		&trans
+				&trans &kp LT	&kp LPAR	&kp LBRC	&kp LBKT	&kp LC(END)						&kp PG_DN	&kp LEFT		&kp DOWN			&kp UP		&kp RIGHT	&trans
+				&trans &kp GT	&kp RPAR	&kp RBRC	&kp RBKT	&trans							&trans	&trans	&trans	&trans	&trans	&trans
+				&trans &trans 	&trans 		&trans 		&trans 		&trans 							&trans 	&trans 	&trans 	&trans 	&trans 	&trans 
+    		>;
     };
 
 	// [3] CONTROL = = = = = = = = = = = = = = = = = = = = = = = = = = = 
