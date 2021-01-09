@@ -30,13 +30,13 @@
 				// |  ESC  |  A   |  S   |  D   |  F   |  G   ||   M   |  N    |  E   |  I   |   O   |   '   |
 				// |   (   |  Z   |  X   |  C   |  V   |  B   ||   K   |  M    |  ,   |  .   |   /   |   )   |
 				// |-----------------------------------------------------------------------------------------|
-				// | D_PW  | PW   | ____ | ____ | TAB/4| SPC/2|| RET/1 | BPSC  | DEL  | ____ |  NW   |  D_NW |
+				// | D_PW  | PW   | ____ | ___  | TAB/3| SPC/1|| RET/2 | BPSC  | DEL  | ____ |  NW   |  D_NW |
 				// ==========================================================================================+
 			bindings = <
 				&kp CAPS  &kp Q    	 &kp W 		 &kp F 		  &kp P 	   &kp B  		&kp J      &kp L  	&kp U     &kp Y    &kp SEMI &kp MINUS
 				&kp ESC   &hm LALT A &hm LGUI R  &hm LSHFT S  &hm LCTRL T  &kp G  		&kp M  &hm LCTRL N  &hm LSHFT E   &hm LGUI I   &hm LALT O   &kp SQT
 				&kp LPAR  &kp Z    	 &kp X 		 &kp C 		  &kp D 	   &kp V  		&kp K      &kp H  	&kp COMMA &kp DOT  &kp FSLH &kp BSPC
-				&kp LC(BSPC) &kp LC(LEFT) &kp LALT  &kp LCTRL &kp TAB 	&lt 1 SPACE 	&lt 2 RET  &kp BSPC &kp DEL   &kp DOWN &kp LC(RIGHT) &kp LC(DEL)
+				&kp LC(BSPC) &kp LC(LEFT) &kp LALT  &kp DEL &lt 3 TAB  &lt 1 SPACE 		&lt 2 RET  &lt 3 BSPC &kp DEL   &kp DOWN &kp LC(RIGHT) &kp LC(DEL)
 			>;
 		};
 
@@ -44,38 +44,56 @@
 
     numsym {
 			// --------------------------------------------------------------------------------------------------+
-			// |  ____ |   +   |   1   |   2   |   3   |   -   ||   :   |   ^   |   #   |   %   |   $   |  ____  |
+			// |  ____ |   +   |   1   |   2   |   3   |   -   ||   ^   |   $   |   #   |   %   |   :   |   UND  |
 			// |   ~   |   .   |   4   |   5   |   6   |   0   ||   *   |   =   |   !   |   @   |   &   |    |   |
-			// |  ____ |   ,   |   7   |   8   |   9   |  ____ ||  ____ |   `   |   <   |   >   |   \   |  ____  |
+			// |  ____ |   ,   |   7   |   8   |   9   |  ____ ||  ____ |   `   |   <   |   >   |   ?   |    \   |
 			// |-------------------------------------------------------------------------------------------------|
 			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ==================================================================================================+
 			bindings = <
-				&trans    &kp KP_PLUS  &kp KP_N1  &kp KP_N2	 &kp KP_N3  &kp KP_MINUS     &kp COLON	&kp CARET	&kp HASH	&kp PRCNT	&kp DLLR	&trans
+				&trans    &kp KP_PLUS  &kp KP_N1  &kp KP_N2	 &kp KP_N3  &kp KP_MINUS     &kp CARET	&kp DLLP	&kp HASH	&kp PRCNT	&kp COLON	&kp UND
 				&kp TILDE &kp DOT	   &kp KP_N4  &kp KP_N5	 &kp KP_N6	&kp KP_N0	     &kp STAR	&kp EQUAL	&kp EXCL	&kp AT		&kp AMPS	&kp PIPE
-				&trans    &kp COMMA	   &kp KP_N7  &kp KP_N8	 &kp KP_N9	&trans	         &trans	    &kp GRAVE	&kp LT		&kp GT		&kp BSLH	&trans
+				&trans    &kp COMMA	   &kp KP_N7  &kp KP_N8	 &kp KP_N9	&trans	         &trans	    &kp GRAVE	&kp LT		&kp GT		&kp QMARK	&kp BSLH	
 				&trans    &trans       &trans	  &trans	 &trans		&trans			 &trans		&trans		&trans		&trans		&trans		&trans
 			>;
     };
 
-	// [2] RAISE = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+	// [2] NAVIGATION = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
     nav {
 			// --------------------------------------------------------------------------------------------------+
-			// |  ____ |  HOME |  D_PW |  S_PW |   PW  |  PG_T || PG_UP |   NW  |  S_NW |  D_NW |  END  |  ____  |
-			// |  ____ |   <   |   (   |   {   |   [   |  PG_B || PG_DN |  LEFT |  DOWN |   UP  | RIGHT |  ____  |
+			// |  ____ |  S_PW |  HOME |  D_PW |   PW  |  PG_T || PG_UP |   NW  |  D_NW |  END  |  S_NW |  ____  |
+			// |  BSPC |   <   |   (   |   {   |   [   |  PG_B || PG_DN |  LEFT |  DOWN |   UP  | RIGHT |  DEL   |
 			// |  ____ |   >   |   )   |   }   |   ]   |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// |-------------------------------------------------------------------------------------------------|
 			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ==================================================================================================+
 			bindings = <
-				&trans &kp HOME	&kp LC(BSPC)	&kp LC(LS(LEFT))	&kp LC(LEFT)	&kp LC(HOME)	&kp PG_UP	&kp LC(RIGHT)	&kp LS(LC(RIGHT))	&kp LC(DEL)	&kp END		&trans
-				&trans &kp LT	&kp LPAR	&kp LBRC	&kp LBKT	&kp LC(END)						&kp PG_DN	&kp LEFT		&kp DOWN			&kp UP		&kp RIGHT	&trans
+				&trans &kp LC(LS(LEFT))	&kp HOME	&kp LC(BSPC)	&kp LC(LEFT)	&kp LC(HOME)	&kp PG_UP	&kp LC(RIGHT)	&kp LC(DEL)	&kp END		&kp LS(LC(RIGHT))	&trans
+				&kp BSPC &kp LT	&kp LPAR	&kp LBRC	&kp LBKT	&kp LC(END)						&kp PG_DN	&kp LEFT		&kp DOWN			&kp UP		&kp RIGHT	&kp DEL
 				&trans &kp GT	&kp RPAR	&kp RBRC	&kp RBKT	&trans							&trans	&trans	&trans	&trans	&trans	&trans
 				&trans &trans 	&trans 		&trans 		&trans 		&trans 							&trans 	&trans 	&trans 	&trans 	&trans 	&trans 
     		>;
     };
 
-	// [3] CONTROL = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+	// [3] EDIT = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+	edit {
+			// --------------------------------------------------------------------------------------------------+
+			// |  ____ |  APP  |  BSPC |  DEL  |  RET  |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
+			// | RENAME|  UNDO |  COPY |  CUT  | PASTE |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
+			// |  ____ |  REDO |  BOLD |  ITAL |  UNDL |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
+			// |-------------------------------------------------------------------------------------------------|
+			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
+			// ==================================================================================================+			
+			bindings = <
+				&trans	&kp K_APP	&kp BSPC	&kp DEL		&kp RET		&trans		&trans	&trans	&trans	&trans	&trans	&trans
+				&kp F2	&kp LC(Z)	&kp LC(C)	&kp LC(X)	&kp LC(V)	&trans		&trans	&trans	&trans	&trans	&trans	&trans
+				&trans	&kp LC(Y)	&kp LC(B)	&kp LC(I)	&kp LC(U)	&trans		&trans	&trans	&trans	&trans	&trans	&trans
+				&trans	&trans		&trans	&trans	&trans	&trans					&trans	&trans	&trans	&trans	&trans	&trans
+
+			>;
+	};
+
+	// [4] CONTROL = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	control {
 			// ----------------------------------------------------------------------------------------+
 			// |BT_CLR| ____ | prof1| prof2| prof3| ____ || ____ | _____ | _____ | _____ | ____ | ____ |
