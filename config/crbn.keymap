@@ -2,6 +2,8 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
+ * 
+ * link to ZMK keycodes index: https://zmkfirmware.dev/docs/codes/
  */
 
 #include <behaviors.dtsi>
@@ -36,12 +38,11 @@
 				&kp CAPS  &kp Q    	 &kp W 		 &kp F 		  &kp P 	   &kp B  		&kp J      &kp L  	&kp U     &kp Y    &kp SEMI &kp MINUS
 				&kp ESC   &hm LALT A &hm LGUI R  &hm LSHFT S  &hm LCTRL T  &kp G  		&kp M  &hm LCTRL N  &hm LSHFT E   &hm LGUI I   &hm LALT O   &kp SQT
 				&kp LPAR  &kp Z    	 &kp X 		 &kp C 		  &kp D 	   &kp V  		&kp K      &kp H  	&kp COMMA &kp DOT  &kp FSLH &kp BSPC
-				&kp LC(BSPC) &kp LC(LEFT) &kp LALT  &kp DEL &lt 3 TAB  &lt 1 SPACE 		&lt 2 RET  &lt 3 BSPC &kp DEL   &kp DOWN &kp LC(RIGHT) &kp LC(DEL)
+				&kp LC(BSPC) &kp LC(LEFT) &kp LALT  &kp DEL &lt 3 TAB  &lt 1 SPACE 		&lt 2 RET  &lt 4 BSPC &kp DEL   &kp DOWN &kp LC(RIGHT) &kp LC(DEL)
 			>;
 		};
 
 	// [1] NUMSYM = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-
     numsym {
 			// --------------------------------------------------------------------------------------------------+
 			// |  ____ |   +   |   1   |   2   |   3   |   -   ||   ^   |   $   |   #   |   %   |   :   |   UND  |
@@ -51,7 +52,7 @@
 			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ==================================================================================================+
 			bindings = <
-				&trans    &kp KP_PLUS  &kp KP_N1  &kp KP_N2	 &kp KP_N3  &kp KP_MINUS     &kp CARET	&kp DLLP	&kp HASH	&kp PRCNT	&kp COLON	&kp UND
+				&trans    &kp KP_PLUS  &kp KP_N1  &kp KP_N2	 &kp KP_N3  &kp KP_MINUS     &kp CARET	&kp DLLR	&kp HASH	&kp PRCNT	&kp COLON	&kp UNDER
 				&kp TILDE &kp DOT	   &kp KP_N4  &kp KP_N5	 &kp KP_N6	&kp KP_N0	     &kp STAR	&kp EQUAL	&kp EXCL	&kp AT		&kp AMPS	&kp PIPE
 				&trans    &kp COMMA	   &kp KP_N7  &kp KP_N8	 &kp KP_N9	&trans	         &trans	    &kp GRAVE	&kp LT		&kp GT		&kp QMARK	&kp BSLH	
 				&trans    &trans       &trans	  &trans	 &trans		&trans			 &trans		&trans		&trans		&trans		&trans		&trans
