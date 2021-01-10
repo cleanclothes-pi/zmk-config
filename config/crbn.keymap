@@ -32,7 +32,7 @@
 				// |  ESC  |  A   |  S   |  D   |  F   |  G   ||   M   |  N    |  E   |  I   |   O   |   '   |
 				// |   (   |  Z   |  X   |  C   |  V   |  B   ||   K   |  M    |  ,   |  .   |   /   |   )   |
 				// |-----------------------------------------------------------------------------------------|
-				// | D_PW  | PW   | ____ | ___  | TAB/3| SPC/1|| RET/2 | BPSC  | DEL  | ____ |  NW   |  D_NW |
+				// | D_PW  | PW   | ____ | ___  | TAB/3| SPC/1|| RET/2 | BPSC/4| DEL  | ____ |  NW   |  D_NW |
 				// ==========================================================================================+
 			bindings = <
 				&kp CAPS  &kp Q    	 &kp W 		 &kp F 		  &kp P 	   &kp B  		&kp J      &kp L  	&kp U     &kp Y    &kp SEMI &kp MINUS
@@ -47,14 +47,14 @@
 			// --------------------------------------------------------------------------------------------------+
 			// |  ____ |   +   |   1   |   2   |   3   |   -   ||   ^   |   $   |   #   |   %   |   :   |   UND  |
 			// |   ~   |   .   |   4   |   5   |   6   |   0   ||   *   |   =   |   !   |   @   |   &   |    |   |
-			// |  ____ |   ,   |   7   |   8   |   9   |  ____ ||  ____ |   `   |   <   |   >   |   ?   |    \   |
+			// |  ____ |   ,   |   7   |   8   |   9   |  SPC  ||  ____ |   `   |   <   |   >   |   ?   |    \   |
 			// |-------------------------------------------------------------------------------------------------|
 			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ==================================================================================================+
 			bindings = <
 				&trans    &kp KP_PLUS  &kp KP_N1  &kp KP_N2	 &kp KP_N3  &kp KP_MINUS     &kp CARET	&kp DLLR	&kp HASH	&kp PRCNT	&kp COLON	&kp UNDER
 				&kp TILDE &kp DOT	   &kp KP_N4  &kp KP_N5	 &kp KP_N6	&kp KP_N0	     &kp STAR	&kp EQUAL	&kp EXCL	&kp AT		&kp AMPS	&kp PIPE
-				&trans    &kp COMMA	   &kp KP_N7  &kp KP_N8	 &kp KP_N9	&trans	         &trans	    &kp GRAVE	&kp LT		&kp GT		&kp QMARK	&kp BSLH	
+				&trans    &kp COMMA	   &kp KP_N7  &kp KP_N8	 &kp KP_N9	&kp SPACE	         &trans	    &kp GRAVE	&kp LT		&kp GT		&kp QMARK	&kp BSLH	
 				&trans    &trans       &trans	  &trans	 &trans		&trans			 &trans		&trans		&trans		&trans		&trans		&trans
 			>;
     };
@@ -69,27 +69,27 @@
 			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ==================================================================================================+
 			bindings = <
-				&trans &kp LC(LS(LEFT))	&kp HOME	&kp LC(BSPC)	&kp LC(LEFT)	&kp LC(HOME)	&kp PG_UP	&kp LC(RIGHT)	&kp LC(DEL)	&kp END		&kp LS(LC(RIGHT))	&trans
-				&kp BSPC &kp LT	&kp LPAR	&kp LBRC	&kp LBKT	&kp LC(END)						&kp PG_DN	&kp LEFT		&kp DOWN			&kp UP		&kp RIGHT	&kp DEL
+				&trans &kp LC(LS(LEFT))	&kp HOME  &kp LC(BSPC)  &kp LC(LEFT)  &kp LC(HOME)			&kp PG_UP	&kp LC(RIGHT)	&kp LC(DEL)	&kp END		&kp LS(LC(RIGHT))	&trans
+				&kp BSPC &kp LT	&kp LPAR	&hm LSHFT LBRC	&hm LCTRL LBKT	&kp LC(END)				&kp PG_DN	&kp LEFT		&kp DOWN			&kp UP		&kp RIGHT	&kp DEL
 				&trans &kp GT	&kp RPAR	&kp RBRC	&kp RBKT	&trans							&trans	&trans	&trans	&trans	&trans	&trans
-				&trans &trans 	&trans 		&trans 		&trans 		&trans 							&trans 	&trans 	&trans 	&trans 	&trans 	&trans 
+				&trans &trans 	&trans 		&trans	&trans	&trans 									&trans 	&trans 	&trans 	&trans 	&trans 	&trans 
     		>;
     };
 
 	// [3] EDIT = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	edit {
 			// --------------------------------------------------------------------------------------------------+
-			// |  ____ |  APP  |  BSPC |  DEL  |  RET  |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
-			// | RENAME|  UNDO |  COPY |  CUT  | PASTE |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
-			// |  ____ |  REDO |  BOLD |  ITAL |  UNDL |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
+			// |  ____ |  APP  |  BSPC |  DEL  |  RET  |  ____ ||  ____ |   F1  |  F2   |   F3  |  F10  |  ____  |
+			// | RENAME|  UNDO |  COPY |  CUT  | PASTE |  ____ ||  ____ |   F4  |  F5   |   F6  |  F11  |  ____  |
+			// |  ____ |  REDO |  BOLD |  ITAL |  UNDL |  ____ ||  ____ |   F7  |  F8   |   F9  |  F12  |  ____  |
 			// |-------------------------------------------------------------------------------------------------|
 			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ==================================================================================================+			
 			bindings = <
-				&trans	&kp K_APP	&kp BSPC	&kp DEL		&kp RET		&trans		&trans	&trans	&trans	&trans	&trans	&trans
-				&kp F2	&kp LC(Z)	&kp LC(C)	&kp LC(X)	&kp LC(V)	&trans		&trans	&trans	&trans	&trans	&trans	&trans
-				&trans	&kp LC(Y)	&kp LC(B)	&kp LC(I)	&kp LC(U)	&trans		&trans	&trans	&trans	&trans	&trans	&trans
-				&trans	&trans		&trans	&trans	&trans	&trans					&trans	&trans	&trans	&trans	&trans	&trans
+				&trans	&kp K_APP	&kp BSPC	&kp DEL		&kp RET		&trans		&trans	&kp F1	&kp F2	&kp F3	&kp F10	&trans
+				&kp F2	&kp LC(Z)	&kp LC(C)	&kp LC(X)	&kp LC(V)	&trans		&trans	&kp F4	&kp F5	&kp F6	&kp F11	&trans
+				&trans	&kp LC(Y)	&kp LC(B)	&kp LC(I)	&kp LC(U)	&trans		&trans	&kp F7	&kp F8	&kp F9	&kp F12	&trans
+				&trans	&trans		&trans		&trans		&trans		&trans		&trans	&trans	&trans	&trans	&trans	&trans
 
 			>;
 	};
@@ -97,16 +97,22 @@
 	// [4] CONTROL = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	control {
 			// ----------------------------------------------------------------------------------------+
-			// |BT_CLR| ____ | prof1| prof2| prof3| ____ || ____ | _____ | _____ | _____ | ____ | ____ |
-			// |RESET | ____ | prof4| prof5| ____ | ____ || ____ | _____ | _____ | _____ | ____ | ____ |
-			// |BOOTLD| ____ | ____ | ____ | ____ | ____ || ____ | _____ | _____ | _____ | ____ | ____ |
+			// |BOOTLD| ____ | prof1| prof2| prof3| ____ || ____ | v_MUTE| V_DN  | v_UP  | ____ | ____ |
+			// |RESET | ____ | prof4| prof5| ____ | ____ || ____ | B_TOG | B_DN  | B_UP  | ____ | ____ |
+			// |BT_CLR| ____ | ____ | ____ | ____ | ____ || ____ | M_STOP| M_PRV | M_NXT | M_PP | ____ |
+			// |---------------------------------------------------------------------------------------|
 			// | ____ | ____ | ____ | ____ | ____ | ____ || ____ | _____ | _____ | _____ | ____ | ____ |
+			// ========================================================================================+	
 		bindings = <
-			&bt BT_CLR 	&trans 	&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans 		&trans &trans &trans &trans &trans &trans
-			&reset 		&trans 	&bt BT_SEL 3 &bt BT_SEL 4 &trans 	   &trans 		&trans &trans &trans &trans &trans &trans
-			&bootloader &trans 	&trans 		 &trans 	  &trans 	   &trans 		&trans &trans &trans &trans &trans &trans
+			&bootloader 	&trans 	&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans	&trans &kp C_MUTE	&kp C_VOL_DN	&kp C_VOL_UP	&trans &trans
+			&reset 		&trans 	&bt BT_SEL 3 &bt BT_SEL 4 &trans 	   &trans 		&trans &kp C_BKLT_TOG	&kp C_BRI_DN	&kp C_BRI_UP	&trans &trans
+			&bt BT_CLR &trans 	&trans 		 &trans 	  &trans 	   &trans 		&trans &kp C_STOP	&kp C_PREV	&kp C_NEXT	&kp C_PP &trans
 			&trans 		&trans 	&trans 		 &trans 	  &trans       &trans 		&trans &trans &trans &trans &trans &trans
 		>;
+
+
+
+
 	};
 
   };
