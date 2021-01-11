@@ -55,7 +55,7 @@
 	thaiup {
 			bindings = <
 				&trans	&kp LS(A)	&kp Q	&kp LS(F)	&kp LS(K)	&kp LS(E)	&kp LS(LBKT)	&kp N5	&kp N4	&kp LS(COMMA)	&kp LS(U)	&kp LS(DOT)
-				&trans	&kp R	&kp DOT	&kp EQUAL	&kp LS(N6)	&kp LS(D)		&kp LS(N)	&kp N6	&kp N7	&kp E	&kp LS(I)	&kp LS(S)
+				&trans	&kp R	&kp DOT	&kp EQUAL	&kp LS(N6)	&kp LS(D)		&kp LS(V)	&kp N6	&kp N7	&kp E	&kp LS(I)	&kp LS(S)
 				&trans	&kp A	&kp LS(R)	&kp Z	&kp LS(P)	&kp LS(C)		&kp FSLH	&kp LS(L)	&kp LS(SEMI)	&kp LS(T)	&kp LS(J)	&kp LS(G)
 				&trans	&trans	&trans	&trans	&trans	&trans					&trans	&trans	&trans	&trans	&trans	&trans
 
