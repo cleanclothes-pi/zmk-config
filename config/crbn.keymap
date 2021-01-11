@@ -38,7 +38,7 @@
 				&kp CAPS  &kp Q    	 &kp W 		 &kp F 		  &kp P 	   &kp B  		&kp J      &kp L  	&kp U     &kp Y    &kp SEMI &kp MINUS
 				&kp ESC   &hm LALT A &hm LGUI R  &hm LSHFT S  &hm LCTRL T  &kp G  		&kp M  &hm LCTRL N  &hm LSHFT E   &hm LGUI I   &hm LALT O   &kp SQT
 				&kp LPAR  &kp Z    	 &kp X 		 &kp C 		  &kp D 	   &kp V  		&kp K      &kp H  	&kp COMMA &kp DOT  &kp FSLH &kp BSPC
-				&kp LC(BSPC) &kp LC(LEFT) &kp LALT  &kp DEL &lt 5 TAB  &lt 3 SPACE 		&lt 4 RET  &lt 6 BSPC &kp DEL   &tog 1 &kp LC(RIGHT) &kp LC(DEL)
+				&kp LC(BSPC) &kp LC(LEFT) &kp LS(LALT)  &tog 1 &lt 5 TAB  &lt 3 SPACE 		&lt 4 RET  &lt 6 BSPC &kp DEL   &tog 1 &kp LC(RIGHT) &kp LC(DEL)
 			>;
 		};
 
@@ -48,7 +48,7 @@
 				&trans	&kp L	&kp S	&kp U	&kp P	&kp N0			&kp B	&kp COMMA	&kp RBKT	&kp X	&kp W	&kp LS(W)
 				&kp ESC &kp SQT	&kp G	&lt 2 D	&kp O	&kp F			&kp H	&kp K		&lt 2 J		&kp I	&kp SEMI	&kp LBKT 
 				&trans  &kp C	&kp T	&kp Y	&kp N8	&kp LS(H)		&kp N9	&kp M		&kp V		&kp N 	&kp MINUS	&kp LS(N)
-				&kp LC(BSPC) &kp LC(LEFT) &kp LALT  &kp DEL &lt 5 TAB  &lt 3 SPACE 		&lt 4 RET  &lt 6 BSPC &kp DEL   &tog 1 &kp LC(RIGHT) &kp LC(DEL)
+				&kp LC(BSPC) &kp LC(LEFT) &kp LS(LALT)  &tog 1 &lt 5 TAB  &lt 3 SPACE 		&lt 4 RET  &lt 6 BSPC &kp DEL   &tog 1 &kp LC(RIGHT) &kp LC(DEL)
 			>;
 	};
 	// [2] THAI UPPER
