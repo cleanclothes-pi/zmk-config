@@ -62,7 +62,7 @@
 				// ==========================================================================================+
 			bindings = <
 				&kp CAPS  &kp Q    	 &kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J      &kp L  	&kp U     &kp Y    &kp SEMI &kp MINUS
-				&kp ESC   &hm2 LALT A &hm LGUI R  &hm1 LSHFT S  &hm LCTRL T  &kp G  			&kp M  &hm LCTRL N  &hm1 LSHFT E   &hm2 LGUI I   &hm LALT O   &kp SQT
+				&kp ESC   &hm2 LALT A &hm LGUI R  &hm LSHFT S  &hm LCTRL T  &kp G  			&kp M  &hm LCTRL N  &hm LSHFT E   &hm2 LGUI I   &hm LALT O   &kp SQT
 				&kp LPAR  &kp Z    	 &kp X 		 &kp C 		  &kp D 	   &kp V  				&kp K      &kp H  	&kp COMMA &kp DOT  &kp FSLH &kp RPAR
 				&kp LC(BSPC) &kp LC(LEFT) &kp LS(LALT)  &tog THAI &lt EDIT TAB &lt NUM SPACE 	&lt NAV RET  &lt CONTROL BSPC &kp DEL   &tog THAI &kp LC(RIGHT) &kp LC(DEL)
 			>;
