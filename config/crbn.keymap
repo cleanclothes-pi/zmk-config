@@ -135,7 +135,7 @@
 			// ==================================================================================================+
 			bindings = <
 				&trans &kp LC(LS(LEFT))	&kp LC(BSPC)  &kp LC(LEFT) &kp HOME  &kp LC(HOME)			&kp PG_UP	&kp END		&kp LC(RIGHT)	&kp LC(DEL)	&kp LS(LC(RIGHT))	&trans
-				&kp F2 &kp LC(Z) &mt LGUI LC(X)	&mt LSHFT LC(C)	&mt LCTRL LC(V)	&kp LC(END)			&kp PG_DN	&kp LEFT	&kp DOWN		&kp UP		&kp RIGHT	&kp DEL
+				&kp F2 &kp LC(Z) &hm LGUI LC(X)	&hm1 LSHFT LC(C)	&hm LCTRL LC(V)	&kp LC(END)		&kp PG_DN	&kp LEFT	&kp DOWN		&kp UP		&kp RIGHT			&kp DEL
 				&trans &trans 	&trans 		&trans	&trans	&trans									&trans	&trans	&trans	&trans	&trans	&trans
 				&trans &trans 	&trans 		&trans	&trans	&trans 									&trans 	&trans 	&trans 	&trans 	&trans 	&trans 
     		>;
@@ -151,10 +151,10 @@
 			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ==================================================================================================+			
 			bindings = <
-				&kp LC(A)	&kp LC(S)	&kp BSPC	&kp DEL		&kp RET		&trans		&trans	&kp F1	&kp F2	&kp F3	&kp F10	&trans
-				&kp F2	&kp LC(Z)	&kp LC(X)	&kp LC(C)	&kp LC(V)	&trans			&trans	&kp F4	&kp F5	&kp F6	&kp F11	&trans
-				&kp K_APP	&kp LC(Y)	&kp LC(B)	&kp LC(I)	&kp LC(U)	&trans		&trans	&kp F7	&kp F8	&kp F9	&kp F12	&trans
-				&trans	&trans		&trans		&trans		&trans		&trans			&trans	&trans	&trans	&trans	&trans	&trans
+				&kp LC(A)	&kp LC(S)	&kp BSPC	&kp DEL		&kp RET		&trans					&trans	&kp F1	&kp F2	&kp F3	&kp F10	&trans
+				&kp F2	&kp LC(Z)	&kp LC(X)	&hm1 LSHFT LC(C)	&hm LCTRL LC(V)	&trans			&trans	&kp F4	&kp F5	&kp F6	&kp F11	&trans
+				&kp K_APP	&kp LC(Y)	&kp LC(B)	&kp LC(I)	&kp LC(U)	&trans					&trans	&kp F7	&kp F8	&kp F9	&kp F12	&trans
+				&trans	&trans		&trans		&trans		&trans		&trans						&trans	&trans	&trans	&trans	&trans	&trans
 
 			>;
 	};
