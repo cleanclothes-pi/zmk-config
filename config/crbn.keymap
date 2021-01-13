@@ -66,7 +66,7 @@
 				// |  ESC  |  A   |  S   |  D   |  F   |  G   ||   M   |  N    |  E   |  I   |   O   |   '   |
 				// |  (/{  |  Z   |  X   |  C   |  V   |  B   ||   K   |  M    |  ,   |  .   |   /   |   )/} |
 				// |-----------------------------------------------------------------------------------------|
-				// | D_PW  | PW   | ____ | ___  | TAB/3| SPC/1|| RET/2 | BPSC/4| DEL  | ____ |  NW   |  D_NW |
+				// | D_PW  | PW  |SFT+ALT| THAI | TAB/3| SPC/1|| RET/2 | BPSC/4| DEL  | ____ |  NW   |  D_NW |
 				// ==========================================================================================+
 			bindings = <
 				&cht LBKT CAPS  &kp Q &kp W 		&kp F 		&kp P 	   &kp B  				&kp J      &kp L  	&kp U     &kp Y    &kp SEMI &cht RBKT MINUS
