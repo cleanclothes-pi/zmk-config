@@ -46,11 +46,11 @@
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
-		cht: custom_hold_tap1 {
+		cht: custom_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
 			label = "Tap par_hold brc";
 			#binding-cells = <2>;
-			tapping_term_ms = <120>;
+			tapping_term_ms = <140>;
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
 		};
@@ -69,9 +69,9 @@
 				// | D_PW  | PW   | ____ | ___  | TAB/3| SPC/1|| RET/2 | BPSC/4| DEL  | ____ |  NW   |  D_NW |
 				// ==========================================================================================+
 			bindings = <
-				&kp CAPS  &kp Q    	&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J      &kp L  	&kp U     &kp Y    &kp SEMI &kp MINUS
+				&cht LBKT CAPS  &kp Q &kp W 		&kp F 		&kp P 	   &kp B  				&kp J      &kp L  	&kp U     &kp Y    &kp SEMI &cht RBKT MINUS
 				&kp ESC   &hm2 LALT A &hm LGUI R  &hm1 LSHFT S  &hm LCTRL T  &kp G  			&kp M  &hm LCTRL N  &hm1 LSHFT E   &hm2 LGUI I   &hm LALT O   &kp SQT
-				&cht LBRC LPAR  &kp Z    	 &kp X 	&kp C	&kp D	&kp V  					&kp K      &kp H  	&kp COMMA &kp DOT  &kp FSLH &cht RBRC RPAR
+				&cht LBRC LPAR  &kp Z    	 &kp X 	&kp C	&kp D	&kp V  						&kp K      &kp H  	&kp COMMA &kp DOT  &kp FSLH &cht RBRC RPAR
 				&kp LC(BSPC) &kp LC(LEFT) &kp LS(LALT)  &tog THAI &lt EDIT TAB &lt NUM SPACE 	&lt NAV RET  &lt CONTROL BSPC &kp DEL   &tog THAI &kp LC(RIGHT) &kp LC(DEL)
 			>;
 		};
@@ -103,7 +103,7 @@
 				&kp TAB	  &kp Q &kp W &kp F &kp P &kp B  				&kp J   &kp L  &kp U  &kp Y  &kp SEMI	&kp MINUS
 				&kp ESC   &kp A &kp R &kp S &kp T &kp G  				&kp M  	&kp N  &kp E  &kp I  &kp O		&kp SQT
 				&kp LSHFT &kp Z &kp X &kp C &kp D &kp V  				&kp K   &kp H  &kp COMMA &kp DOT  &kp FSLH &kp RPAR
-				&kp LCTRL &kp N1 &kp N2 &kp LGUI &kp LALT  &kp SPACE 	&lt NAV RET  &lt CONTROL BSPC &kp DEL   &tog THAI &kp LC(RIGHT) &kp LC(DEL)				
+				&kp LCTRL &kp N1 &kp N2 &kp LGUI &kp LALT  &kp SPACE 	&lt NAV RET  &lt CONTROL BSPC &kp DEL   &tog THAI &kp LC(RIGHT) &kp LC(DEL)		
 			>;
 	};
 
