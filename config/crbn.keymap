@@ -34,8 +34,8 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
 			#binding-cells = <2>;
-			tapping_term_ms = <50>;
-			flavor = "balanced";
+			tapping_term_ms = <100>;
+			flavor = "hold-preferred";
 			bindings = <&kp>, <&kp>;
 		};
 		hm2: homerow_mods2 {
@@ -77,6 +77,7 @@
 				&kp LC(BSPC) &kp LC(LEFT) &kp LS(LALT)  &tog THAI &lt EDIT TAB &lt NUM SPACE 	&lt NAV RET  &lt CONTROL BSPC &kp DEL   &tog THAI &kp LC(RIGHT) &kp LC(DEL)
 			>;
 	};
+
 	// [2] THAI UPPER = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 	thaiup {
 			bindings = <
@@ -118,15 +119,15 @@
 	// [5] NAVIGATION = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
     nav {
 			// --------------------------------------------------------------------------------------------------+
-			// |  ____ |  S_PW |  HOME |  D_PW |   PW  |  PG_T || PG_UP |   NW  |  D_NW |  END  |  S_NW |  ____  |
+			// |  ____ |  S_PW |  D_PW |   PW  |  HOME |  PG_T || PG_UP |   END |   NW  |  D_NW |  S_NW |  ____  |
 			// |  BSPC |   <   |   (   |   {   |   [   |  PG_B || PG_DN |  LEFT |  DOWN |   UP  | RIGHT |  DEL   |
 			// |  ____ |   >   |   )   |   }   |   ]   |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// |-------------------------------------------------------------------------------------------------|
 			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ==================================================================================================+
 			bindings = <
-				&trans &kp LC(LS(LEFT))	&kp HOME  &kp LC(BSPC)  &kp LC(LEFT)  &kp LC(HOME)			&kp PG_UP	&kp LC(RIGHT)	&kp LC(DEL)	&kp END		&kp LS(LC(RIGHT))	&trans
-				&kp BSPC &kp LT	&kp LPAR	&hm LSHFT LBRC	&hm LCTRL LBKT	&kp LC(END)				&kp PG_DN	&kp LEFT		&kp DOWN			&kp UP		&kp RIGHT	&kp DEL
+				&trans &kp LC(LS(LEFT))	&kp LC(BSPC)  &kp LC(LEFT) &kp HOME  &kp LC(HOME)			&kp PG_UP	&kp END		&kp LC(RIGHT)	&kp LC(DEL)	&kp LS(LC(RIGHT))	&trans
+				&kp BSPC &kp LT	&kp LPAR	&hm LSHFT LBRC	&hm LCTRL LBKT	&kp LC(END)				&kp PG_DN	&kp LEFT	&kp DOWN			&kp UP		&kp RIGHT	&kp DEL
 				&trans &kp GT	&kp RPAR	&kp RBRC	&kp RBKT	&trans							&trans	&trans	&trans	&trans	&trans	&trans
 				&trans &trans 	&trans 		&trans	&trans	&trans 									&trans 	&trans 	&trans 	&trans 	&trans 	&trans 
     		>;
@@ -143,7 +144,7 @@
 			// ==================================================================================================+			
 			bindings = <
 				&trans	&kp K_APP	&kp BSPC	&kp DEL		&kp RET		&trans		&trans	&kp F1	&kp F2	&kp F3	&kp F10	&trans
-				&kp F2	&kp LC(Z)	&kp LC(C)	&kp LC(X)	&kp LC(V)	&trans		&trans	&kp F4	&kp F5	&kp F6	&kp F11	&trans
+				&kp F2	&kp LC(Z)	&kp LC(X)	&kp LC(C)	&kp LC(V)	&trans		&trans	&kp F4	&kp F5	&kp F6	&kp F11	&trans
 				&trans	&kp LC(Y)	&kp LC(B)	&kp LC(I)	&kp LC(U)	&trans		&trans	&kp F7	&kp F8	&kp F9	&kp F12	&trans
 				&trans	&trans		&trans		&trans		&trans		&trans		&trans	&trans	&trans	&trans	&trans	&trans
 
