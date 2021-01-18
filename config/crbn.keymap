@@ -46,11 +46,19 @@
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
-		cht: custom_hold_tap {
+		cht1: custom_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
 			label = "Tap par_hold brc";
 			#binding-cells = <2>;
-			tapping_term_ms = <160>;
+			tapping_term_ms = <190>;
+			flavor = "balanced";
+			bindings = <&kp>, <&kp>;
+		};
+		cht2: custom_hold_tap {
+			compatible = "zmk,behavior-hold-tap";
+			label = "Tap par_hold brc";
+			#binding-cells = <2>;
+			tapping_term_ms = <190>;
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
 		};
@@ -129,14 +137,14 @@
 			// --------------------------------------------------------------------------------------------------+
 			// |  ____ |  S_PW |  D_PW |   PW  |  HOME |  PG_T || PG_UP |   END |   NW  |  D_NW |  S_NW |  ____  |
 			// | RENAME|  UNDO |  CUT  |  COPY | PASTE |  PG_B || PG_DN |  LEFT |  DOWN |   UP  | RIGHT |  DEL   |
-			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
+			// |  APP  |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// |-------------------------------------------------------------------------------------------------|
 			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ==================================================================================================+
 			bindings = <
 				&trans &kp LC(LS(LEFT))	&kp LC(BSPC)  &kp LC(LEFT) &kp HOME  &kp LC(HOME)			&kp PG_UP	&kp END		&kp LC(RIGHT)	&kp LC(DEL)	&kp LS(LC(RIGHT))	&trans
 				&kp F2 &kp LC(Z) &hm LGUI LC(X)	&hm1 LSHFT LC(C)	&hm LCTRL LC(V)	&kp LC(END)		&kp PG_DN	&kp LEFT	&kp DOWN		&kp UP		&kp RIGHT			&kp DEL
-				&trans &trans 	&trans 		&trans	&trans	&trans									&trans	&trans	&trans	&trans	&trans	&trans
+				&kp K_APP &trans 	&trans 		&trans	&trans	&trans								&trans	&trans	&trans	&trans	&trans	&trans
 				&trans &trans 	&trans 		&trans	&trans	&trans 									&trans 	&trans 	&trans 	&trans 	&trans 	&trans 
     		>;
     };
