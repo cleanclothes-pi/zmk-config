@@ -46,7 +46,7 @@
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
-		cht1: custom_hold_tap {
+		cht: custom_hold_tap {
 			compatible = "zmk,behavior-hold-tap";
 			label = "Tap par_hold brc";
 			#binding-cells = <2>;
