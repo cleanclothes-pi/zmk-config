@@ -92,18 +92,25 @@
 
 	// [0] DEFAULT = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 		default_layer {
+								// ===================================================================================================================+
+								// | CAPS/[ |  Q,{   |   W   |    F   |    P   |    B    ||     J   |     L    |    U    |    Y    |   ;,}   |   -/]  |
+								// |ESC/HOME|   A    |   R   |    S   |    T   |    G    ||     M   |     N    |    E    |    I    |    O    | '/END  |
+								// |   PW   |  Z,(   |   X   |    C   |    D   |    v    ||     K   |     H    |    ,    |    .    |   /,)   |   NW   |
+								// |------------------------------------------------------------------------------------------------------------------|
+								// |  D_PW  |  (/{   |SFT+ALT|  THAI |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |   ____  |   )/}   |  D_NW  |
+								// ===================================================================================================================+
 				// ===================================================================================================================+
-				// | CAPS/[ |  Q,{   |   W   |    F   |    P   |    B    ||     J   |     L    |    U    |    Y    |   ;,}   |   -/]  |
-				// |ESC/HOME|   A    |   R   |    S   |    T   |    G    ||     M   |     N    |    E    |    I    |    O    | '/END  |
-				// |   PW   |  Z,(   |   X   |    C   |    D   |    v    ||     K   |     H    |    ,    |    .    |   /,)   |   NW   |
+				// |   ESC  |  Q,{   |   W   |    F   |    P   |    B    ||     J   |     L    |    U    |    Y    |   ;,}   |    -   |
+				// | sk SHFT|   A    |   R   |    S   |    T   |    G    ||     M   |     N    |    E    |    I    |    O    |    '   |
+				// |    PW  |  Z,(   |   X   |    C   |    D   |    v    ||     K   |     H    |    ,    |    .    |   /,)   |   NW   |
 				// |------------------------------------------------------------------------------------------------------------------|
-		 		// |  D_PW  |  (/{   |SFT+ALT|  THAI |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |   ____  |   )/}   |  D_NW  |
+		 		// |D_PW/HOME|  (/{  |SFT+ALT|  THAI |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |   ____  |   )/}   |D_NW/END|
 				// ===================================================================================================================+
 			bindings = <
-				&cht LBKT CAPS  &cht LBRC Q		&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &cht RBRC SEMI 		&cht RBKT MINUS
-				&cht1 HOME ESC  &hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   			&cht1 END SQT
+				&kp ESC	        &cht LBRC Q		&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &cht RBRC SEMI 		&kp MINUS
+				&sk LSHFT  		&hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   			&kp SQT
 				&kp PW    		&cht LPAR Z    	&kp X 		 &kp C		  &kp D		   &kp V  				&kp K      	&kp H  			 &kp COMMA 		&kp DOT  	 &cht RPAR FSLH 		&kp NW
-				&kp D_PW 		&cht LBRC LPAR  &kp LS(LALT) &tog THAI 	  &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &sk LSHFT 				&kp D_NW
+				&cht1 HOME D_PW &cht LBRC LPAR  &kp LS(LALT) &tog THAI 	  &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &sk LSHFT 				&cht1 END D_NW
 			>;
 		};
 
@@ -159,14 +166,14 @@
     numsym {
 			// --------------------------------------------------------------------------------------------------+
 			// |  ____ |   %   |   1   |   2   |   3   |   ^   ||   $   |   !   |   @   |   #   |   :   |   UND  |
-			// |   ~   |   0   |   4   |   5   |   6   |   .   ||   *   |   =   |   +   |   -   |   &   |    |   |
+			// |   ~   |   0   |   4   |   5   |   6   |   .   ||   *   |   =   |   -   |   +   |   &   |    |   |
 			// |  ____ |  :,(  |   7   |   8   |   9   |   ,   ||   \   |   `   |   <   |   >   |  ?,)  |  ____  |
 			// |-------------------------------------------------------------------------------------------------|
 			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ==================================================================================================+
 			bindings = <
 				&trans    &kp PRCNT	   &kp KP_N1  &kp KP_N2	 &kp KP_N3  &kp CARET							&kp DLLR	&kp EXCL	&kp AT		&kp HASH		&kp COLON	&kp UNDER
-				&kp TILDE &kp KP_N0	   &kp KP_N4  &kp KP_N5	 &kp KP_N6	&kp DOT	     						&kp STAR	&kp EQUAL	&kp KP_PLUS &kp KP_MINUS	&kp AMPS	&kp PIPE
+				&kp TILDE &kp KP_N0	   &kp KP_N4  &kp KP_N5	 &kp KP_N6	&kp DOT	     						&kp STAR	&kp EQUAL	&kp KP_MINUS	&kp KP_PLUS &kp AMPS	&kp PIPE
 				&trans    &cht LPAR COLON &kp KP_N7  &kp KP_N8 &kp KP_N9	&kp COMMA     					&kp BSLH	&kp GRAVE	&kp LT		&kp GT			&cht RPAR QMARK	&trans
 				&kp D_PW  &cht LBRC LPAR  &kp LS(LALT) &tog THAI  &lt EDIT TAB &lt NAV SPACE				&lt NUM BSPC &lt CONTROL RET &kp DEL  &tog THAI 	&cht RBRC RPAR  &kp D_NW
 			>;
