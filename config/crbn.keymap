@@ -20,6 +20,9 @@
 #define EDIT	6
 #define CONTROL	7
 
+#define COPY LC(C)
+#define PASTE LC(V)
+
 / {
 	behaviors {
 		hm: homerow_mods {
@@ -126,7 +129,7 @@
 			// ===================================================================================================+
 			bindings = <
 				&kp LC(A) &kp LC(Y)	&kp BSPC &kp DEL &kp RET  &kp LC(HOME)								&kp PG_UP	&trans	 &trans		&trans	&trans		&trans
-				&cht HOME F2 &kp LC(Z) &hm LGUI LC(X) &hm1 LSHFT LC(C)	&hm LCTRL LC(V)	&kp LC(END)		&kp PG_DN	&kp LEFT &kp DOWN	&kp UP	&kp RIGHT	&trans
+				&cht HOME F2 &kp LC(Z) &hm LGUI LC(X) &hm1 LSHFT COPY	&hm LCTRL PASTE	&kp LC(END)		&kp PG_DN	&kp LEFT &kp DOWN	&kp UP	&kp RIGHT	&trans
 				&trans &kp K_APP &trans  &trans	&trans	&trans											&trans	&trans	&trans	&trans	&trans	&trans
 				&trans &trans 	&trans 	 &trans	&trans	&trans 											&trans 	&trans 	&trans 	&trans 	&trans 	&trans 
     		>;
