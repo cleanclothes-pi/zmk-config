@@ -78,7 +78,7 @@
 			bindings = <&kp>, <&kp>;
 		};
 		hsk: key_press_stiky{
-			compatible = "zmk,beahvior-hold-tap";
+			compatible = "zmk,behavior-hold-tap";
 			label = "hold key-press_tap stiky-key";
 			#binding-cells =<2>;
 			tapping_term_ms = <180>;
