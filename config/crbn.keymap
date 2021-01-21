@@ -77,6 +77,14 @@
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
 		};
+		hsk: hold_tap_stiky {
+			compatible = "zmk,behavior-hold-tap";
+			label = "hold key-press_tap stiky-key";
+			#binding-cells = <2>;
+			tapping_term_ms = <180>;
+			flavor = "balanced";
+			bindings = <&sk>, <&kp>;
+		}; 
 	};
 
 	keymap {
