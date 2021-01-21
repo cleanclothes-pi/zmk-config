@@ -73,7 +73,7 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "Tap par_hold brc";
 			#binding-cells = <2>;
-			tapping_term_ms = <250>;
+			tapping_term_ms = <230>;
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
 		};
@@ -92,7 +92,7 @@
 		 		// |  D_PW  |  (/{   |SFT+ALT|  THAI |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |   ____  |   )/}   |  D_NW  |
 				// ===================================================================================================================+
 			bindings = <
-				&cht LBKT CAPS  &cht LBRC Q		&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J      	&kp L			 &kp U     		&kp Y    	 &cht RBRC SEMI 		&cht RBKT MINUS
+				&cht LBKT CAPS  &cht LBRC Q		&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &cht RBRC SEMI 		&cht RBKT MINUS
 				&cht1 HOME ESC  &hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   			&cht1 END SQT
 				&kp PW    		&cht LPAR Z    	&kp X 		 &kp C		  &kp D		   &kp V  				&kp K      	&kp H  			 &kp COMMA 		&kp DOT  	 &cht RPAR FSLH 		&kp NW
 				&kp D_PW 		&cht LBRC LPAR  &kp LS(LALT) &tog THAI 	  &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &sk LSHFT 				&kp D_NW
