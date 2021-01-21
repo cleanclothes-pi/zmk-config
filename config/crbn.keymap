@@ -19,9 +19,21 @@
 #define NUM		5
 #define EDIT	6
 #define CONTROL	7
+// define frequent key combinations
+#define COPY	LC(C)
+#define PASTE	LC(V)
+#define CUT		LC(X)
+#define UNDO	LC(Z)
+#define REDO	LC(Y)
+#define S_ALL	LC(A)
+#define SAVE	LC(S)
+#define PG_T	LC(HOME)
+#define PG_B	LC(END)
 
-#define COPY LC(C)
-#define PASTE LC(V)
+#define PW		LC(LEFT)
+#define D_PW	LC(BSPC)
+#define NW		LC(RIGHT)
+#define D_NW	LC(DEL)
 
 / {
 	behaviors {
@@ -82,8 +94,8 @@
 			bindings = <
 				&cht LBKT CAPS  &cht LBRC Q		&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J      	&kp L			 &kp U     		&kp Y    	 &cht RBRC SEMI 		&cht RBKT MINUS
 				&cht1 HOME ESC  &hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   			&cht1 END SQT
-				&kp LC(LEFT)    &cht LPAR Z    	&kp X 		 &kp C		  &kp D		   &kp V  				&kp K      	&kp H  			 &kp COMMA 		&kp DOT  	 &cht RPAR FSLH 		&kp LC(RIGHT)
-				&kp LC(BSPC) 	&cht LBRC LPAR  &kp LS(LALT) &tog THAI 	  &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &sk LSHFT 		&kp LC(DEL)
+				&kp PW    		&cht LPAR Z    	&kp X 		 &kp C		  &kp D		   &kp V  				&kp K      	&kp H  			 &kp COMMA 		&kp DOT  	 &cht RPAR FSLH 		&kp NW
+				&kp D_PW 		&cht LBRC LPAR  &kp LS(LALT) &tog THAI 	  &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &sk LSHFT 				&kp D_NW
 			>;
 		};
 
@@ -93,7 +105,7 @@
 				&kp LS(N)		&kp L			&kp S		&kp U		&kp P		 &kp N0				&kp B		 &kp RBKT		 &kp COMMA	&kp X		&kp W			&kp LS(W)
 				&kp ESC 		&kp SQT			&kp G		&lt 2 D		&kp O		 &kp F				&kp H		 &kp K			 &lt 2 J	&kp I		&kp SEMI		&kp LBKT 
 				&kp LS(Z)   	&kp C			&kp T		&kp Y		&kp N8		 &kp LS(H)			&kp N9		 &kp M			 &kp V		&kp N 		&kp MINUS		&kp LS(X)
-				&kp LC(BSPC) 	&cht LBRC LPAR  &kp LS(LALT) &tog THAI 	&lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   	&tog THAI 	&cht RBRC RPAR	&kp LC(DEL)
+				&kp D_PW 	&cht LBRC LPAR  &kp LS(LALT) &tog THAI 	&lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   	&tog THAI 	&cht RBRC RPAR	&kp D_NW
 			>;
 	};
 
@@ -114,7 +126,7 @@
 				&kp TAB	  &kp Q &kp W &kp F &kp P &kp B  				&kp J   &kp L  &kp U  &kp Y  &kp SEMI	&kp MINUS
 				&kp ESC   &kp A &kp R &kp S &kp T &kp G  				&kp M  	&kp N  &kp E  &kp I  &kp O		&kp SQT
 				&kp LSHFT &kp Z &kp X &kp C &kp D &kp V  				&kp K   &kp H  &kp COMMA &kp DOT  &kp FSLH &kp RPAR
-				&kp LCTRL &kp N1 &kp N2 &kp LGUI &kp LALT  &kp SPACE 	&lt NAV RET  &lt CONTROL BSPC &kp DEL   &tog THAI &kp LC(RIGHT) &kp LC(DEL)		
+				&kp LCTRL &kp N1 &kp N2 &kp LGUI &kp LALT  &kp SPACE 	&lt NAV RET  &lt CONTROL BSPC &kp DEL   &tog THAI &kp LC(RIGHT) &kp D_NW
 			>;
 	};
 
@@ -128,10 +140,10 @@
 			// |  ____ |  ____  |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ===================================================================================================+
 			bindings = <
-				&kp LC(A) &kp LC(Y)	&kp BSPC &kp DEL &kp RET  &kp LC(HOME)								&kp PG_UP	&trans	 &trans		&trans	&trans		&trans
-				&cht HOME F2 &kp LC(Z) &hm LGUI LC(X) &hm1 LSHFT COPY	&hm LCTRL PASTE	&kp LC(END)		&kp PG_DN	&kp LEFT &kp DOWN	&kp UP	&kp RIGHT	&trans
-				&trans &kp K_APP &trans  &trans	&trans	&trans											&trans	&trans	&trans	&trans	&trans	&trans
-				&trans &trans 	&trans 	 &trans	&trans	&trans 											&trans 	&trans 	&trans 	&trans 	&trans 	&trans 
+				&kp S_ALL	 &kp REDO	&kp BSPC 	 &kp DEL 			&kp RET  		&kp PG_T			&kp PG_UP	&trans	 &trans		&trans	&trans		&trans
+				&cht HOME F2 &kp UNDO	&hm LGUI CUT &hm1 LSHFT COPY	&hm LCTRL PASTE	&kp PG_B			&kp PG_DN	&kp LEFT &kp DOWN	&kp UP	&kp RIGHT	&trans
+				&trans &kp K_APP &trans  &trans	&trans	&trans												&trans	&trans	&trans	&trans	&trans	&trans
+				&trans &trans 	&trans 	 &trans	&trans	&trans 												&trans 	&trans 	&trans 	&trans 	&trans 	&trans
     		>;
     };
 
@@ -147,8 +159,8 @@
 			bindings = <
 				&trans    &kp PRCNT	   &kp KP_N1  &kp KP_N2	 &kp KP_N3  &kp CARET							&kp DLLR	&kp EXCL	&kp AT		&kp HASH		&kp COLON	&kp UNDER
 				&kp TILDE &kp KP_N0	   &kp KP_N4  &kp KP_N5	 &kp KP_N6	&kp DOT	     						&kp STAR	&kp EQUAL	&kp KP_PLUS &kp KP_MINUS	&kp AMPS	&kp PIPE
-				&trans    &cht LPAR COLON   &kp KP_N7  &kp KP_N8 &kp KP_N9	&kp COMMA     					&kp BSLH	&kp GRAVE	&kp LT		&kp GT			&cht RPAR QMARK	&trans	    
-				&kp LC(BSPC) 	&cht LBRC LPAR  &kp LS(LALT) &tog THAI 	  &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &cht RBRC RPAR &kp LC(DEL)
+				&trans    &cht LPAR COLON &kp KP_N7  &kp KP_N8 &kp KP_N9	&kp COMMA     					&kp BSLH	&kp GRAVE	&kp LT		&kp GT			&cht RPAR QMARK	&trans
+				&kp D_PW  &cht LBRC LPAR  &kp LS(LALT) &tog THAI  &lt EDIT TAB &lt NAV SPACE				&lt NUM BSPC &lt CONTROL RET &kp DEL  &tog THAI 	&cht RBRC RPAR  &kp D_NW
 			>;
     };
 
@@ -164,7 +176,7 @@
 			bindings = <
 				&trans	&trans		&trans		&trans		&trans		&trans						&trans	&kp F1	&kp F2	&kp F3	&kp F10	&trans
 				&trans	&trans		&trans		&trans		&trans		&trans						&trans	&kp F4	&kp F5	&kp F6	&kp F11	&trans
-				&trans	&kp LC(S)	&kp LC(B)	&kp LC(I)	&kp LC(U)	&trans						&trans	&kp F7	&kp F8	&kp F9	&kp F12	&trans
+				&trans	&kp SAVE	&kp LC(B)	&kp LC(I)	&kp LC(U)	&trans						&trans	&kp F7	&kp F8	&kp F9	&kp F12	&trans
 				&trans	&trans		&trans		&trans		&trans		&trans						&trans	&trans	&trans	&trans	&trans	&trans
 
 			>;
