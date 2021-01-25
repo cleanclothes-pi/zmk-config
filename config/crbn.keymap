@@ -48,9 +48,14 @@
 			key-positions = <3 4>;
 			bindings = <&kp ESC>;
 		};
-		combo_ent {
+		combo_ret {
 			timeout-ms = <85>;
 			key-positions = <2 3>;
+			bindings = <&kp RET>;
+		};
+		combo_ret2 {
+			timeout-ms = <80>;
+			key-positions = <8 9>;
 			bindings = <&kp RET>;
 		};
 	};
@@ -91,7 +96,7 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "Tap par_hold brc";
 			#binding-cells = <2>;
-			tapping_term_ms = <210>;
+			tapping_term_ms = <200>;
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
 		};
@@ -104,21 +109,22 @@
 		default_layer {
 
 				// ===================================================================================================================+
-				// |   ESC  |   Q    |   W   |    F   |    P   |    B    ||     J   |     L    |    U    |    Y    |    '"   |   - ;  |
-				// | sk SHFT|   A    |   R   |    S   |    T   |    G    ||     M   |     N    |    E    |    I    |    O    |sk LSHFT|
-				// |    PW  |   Z    |   X,( |   C,{  |    D   |    v    ||     K   |     H    |   , }   |    . )  |    /    |   NW   |
+				// |   CAPS |   Q    |   W   |    F   |    P   |    B    ||     J   |     L    |    U    |    Y    |    ;    |    -   |
+				// |ESC/HOME|   A    |   R   |    S   |    T   |    G    ||     M   |     N    |    E    |    I    |    O    | '/END  |
+				// |   PW   |   Z    |   X,( |   C,{  |    D   |    v    ||     K   |     H    |   , }   |    . )  |    /    |   NW   |
 				// |------------------------------------------------------------------------------------------------------------------|
-		 		// |D_PW/HOME|sl CONTR|SFT+ALT|  THAI |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| sk LSHFT |  DEL  |   ____  |   )/}   |D_NW/END|
+		 		// |  D_PW  |sl CONTR|SFT+ALT|  THAI |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| sk LSHFT |   DEL  |   ____  |   )/}   |  D_NW  |
 				// ===================================================================================================================+
 			bindings = <
-				&cht CAPS ESC	&kp	Q			&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &kp SQT 			&cht SEMI MINUS
-				&sk LSHFT  		&hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   		&sk LSHFT
+				&kp CAPS 		&kp	Q			&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &kp SEMI 			&kp MINUS
+				&cht1 HOME ESC  &hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O 		&cht1 END  SQT
 				&kp PW    		&kp Z			&cht LPAR X  &cht LBRC C  &kp D		   &kp V  				&kp K      	&kp H  			 &cht RBRC COMMA  &cht RPAR DOT &kp FSLH  		&kp NW
-				&cht1 HOME D_PW &sl CONTROL  &kp LS(LALT) &tog THAI 	  &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &sk LSHFT 		 &kp DEL   		&tog THAI 	 &sk LSHFT 			&cht1 END D_NW
+				&kp D_PW &sl CONTROL  &kp LS(LALT) &tog THAI 	  &lt EDIT TAB &lt NAV SPACE				&lt NUM BSPC &sk LSHFT 		 &kp DEL   		&tog THAI 	 &sk LSHFT 			&kp D_NW
 			>;
 		};
 
 	// [1] THAI = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+	// TO DO: change bottom row for thai layer
 	thai {
 			bindings = <
 				&cht LS(N) ESC  &kp L			&kp S		&kp U		&kp P		 &kp N0				&kp B		 &kp RBKT		 &kp COMMA	&kp X			&kp W			&kp LS(H)
