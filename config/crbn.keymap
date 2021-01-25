@@ -35,6 +35,11 @@
 #define NW		LC(RIGHT)
 #define D_NW	LC(DEL)
 
+// thai dict
+#define TH_LPAR LS(Z)
+#define TH_RPAR LS(X)
+#define TH_DQT	LS(W)
+
 / {
 	behaviors {
 		hm: homerow_mods {
@@ -77,14 +82,6 @@
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
 		};
-		hsk: hold_tap_stiky {
-			compatible = "zmk,behavior-hold-tap";
-			label = "hold key-press_tap stiky-key";
-			#binding-cells = <2>;
-			tapping_term_ms = <180>;
-			flavor = "balanced";
-			bindings = <&sk>, <&kp>;
-		}; 
 	};
 
 	keymap {
@@ -101,7 +98,7 @@
 		 		// |D_PW/HOME|  (/{  |SFT+ALT|  THAI |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |   ____  |   )/}   |D_NW/END|
 				// ===================================================================================================================+
 			bindings = <
-				&cht CAPS ESC	&kp	Q			&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &kp SEMI 				&cht FSLSH MINUS
+				&cht CAPS ESC	&kp	Q			&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &kp SEMI 				&cht FSLH MINUS
 				&sk LSHFT  		&hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   			&sk LSHFT
 				&kp PW    		&kp Z			&cht LPAR X  &cht LBRC C  &kp D		   &kp V  				&kp K      	&kp H  			 &cht RBRC COMMA  &cht RPAR DOT &cht QMARK SQT  	&kp NW
 				&cht1 HOME D_PW &cht LBRC LPAR  &kp LS(LALT) &tog THAI 	  &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &sk LSHFT 				&cht1 END D_NW
@@ -113,7 +110,7 @@
 			bindings = <
 				&cht LS(N) ESC  &kp L			&kp S		&kp U		&kp P		 &kp N0				&kp B		 &kp RBKT		 &kp COMMA	&kp X			&kp W			&kp LS(H)
 				&sl THUP 		&kp SQT			&kp G		&hm1 LSHFT D	&kp O	 &kp F				&kp H		 &kp K			 &hm1 LSHFT J	&kp I		&kp SEMI		&sl THUP 
-				&kp PW   		&kp C			&cht LS(Z) T	&kp Y	&kp N8		 &kp MINUS			&kp N9		 &kp M			 &kp V		&cht LS(X) N 	&cht LS(W) LBKT		&kp NW
+				&kp PW   		&kp C			&cht TH_LPAR T	&kp Y	&kp N8		 &kp MINUS			&kp N9		 &kp M			 &kp V		&cht TH_RPAR N 	&cht TH_DQT LBKT		&kp NW
 				&cht1 HOME D_PW &cht LBRC LPAR  &kp LS(LALT) &tog THAI 	 &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   	&tog THAI 		&sk LSHFT 		&cht1 END D_NW
 			>;
 	};
