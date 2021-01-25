@@ -92,24 +92,18 @@
 
 	// [0] DEFAULT = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 		default_layer {
-								// ===================================================================================================================+
-								// | CAPS/[ |  Q,{   |   W   |    F   |    P   |    B    ||     J   |     L    |    U    |    Y    |   ;,}   |   -/]  |
-								// |ESC/HOME|   A    |   R   |    S   |    T   |    G    ||     M   |     N    |    E    |    I    |    O    | '/END  |
-								// |   PW   |  Z,(   |   X   |    C   |    D   |    v    ||     K   |     H    |    ,    |    .    |   /,)   |   NW   |
-								// |------------------------------------------------------------------------------------------------------------------|
-								// |  D_PW  |  (/{   |SFT+ALT|  THAI |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |   ____  |   )/}   |  D_NW  |
-								// ===================================================================================================================+
+
 				// ===================================================================================================================+
-				// |   ESC  |  Q,{   |   W   |    F   |    P   |    B    ||     J   |     L    |    U    |    Y    |   ;,}   |    -   |
-				// | sk SHFT|   A    |   R   |    S   |    T   |    G    ||     M   |     N    |    E    |    I    |    O    |    '   |
-				// |    PW  |  Z,(   |   X   |    C   |    D   |    v    ||     K   |     H    |    ,    |    .    |   /,)   |   NW   |
+				// |   ESC  |   Q    |   W   |    F   |    P   |    B    ||     J   |     L    |    U    |    Y    |    ;    |   -,/  |
+				// | sk SHFT|   A    |   R   |    S   |    T   |    G    ||     M   |     N    |    E    |    I    |    O    |sk LSHFT|
+				// |    PW  |   Z    |   X,( |   C,{  |    D   |    v    ||     K   |     H    |   , }   |    .,)  |   ',?   |   NW   |
 				// |------------------------------------------------------------------------------------------------------------------|
 		 		// |D_PW/HOME|  (/{  |SFT+ALT|  THAI |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |   ____  |   )/}   |D_NW/END|
 				// ===================================================================================================================+
 			bindings = <
-				&kp ESC	        &cht LBRC Q		&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &cht RBRC SEMI 		&kp MINUS
-				&sk LSHFT  		&hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   			&kp SQT
-				&kp PW    		&cht LPAR Z    	&kp X 		 &kp C		  &kp D		   &kp V  				&kp K      	&kp H  			 &kp COMMA 		&kp DOT  	 &cht RPAR FSLH 		&kp NW
+				&cht CAPS ESC	&kp	Q			&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &kp SEMI 				&cht FSLSH MINUS
+				&sk LSHFT  		&hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   			&sk LSHFT
+				&kp PW    		&kp Z			&cht LPAR X  &cht LBRC C  &kp D		   &kp V  				&kp K      	&kp H  			 &cht RBRC COMMA  &cht RPAR DOT &cht QMARK SQT  	&kp NW
 				&cht1 HOME D_PW &cht LBRC LPAR  &kp LS(LALT) &tog THAI 	  &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &sk LSHFT 				&cht1 END D_NW
 			>;
 		};
@@ -117,10 +111,10 @@
 	// [1] THAI = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	thai {
 			bindings = <
-				&kp LS(N)		&kp L			&kp S		&kp U		&kp P		 &kp N0				&kp B		 &kp RBKT		 &kp COMMA	&kp X		&kp W			&kp LS(W)
-				&kp ESC 		&kp SQT			&kp G		&lt 2 D		&kp O		 &kp F				&kp H		 &kp K			 &lt 2 J	&kp I		&kp SEMI		&kp LBKT 
-				&kp LS(Z)   	&kp C			&kp T		&kp Y		&kp N8		 &kp LS(H)			&kp N9		 &kp M			 &kp V		&kp N 		&kp MINUS		&kp LS(X)
-				&kp D_PW 	&cht LBRC LPAR  &kp LS(LALT) &tog THAI 	&lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   	&tog THAI 	&cht RBRC RPAR	&kp D_NW
+				&cht LS(N) ESC  &kp L			&kp S		&kp U		&kp P		 &kp N0				&kp B		 &kp RBKT		 &kp COMMA	&kp X			&kp W			&kp LS(H)
+				&sl THUP 		&kp SQT			&kp G		&hm1 LSHFT D	&kp O	 &kp F				&kp H		 &kp K			 &hm1 LSHFT J	&kp I		&kp SEMI		&sl THUP 
+				&kp PW   		&kp C			&cht LS(Z) T	&kp Y	&kp N8		 &kp MINUS			&kp N9		 &kp M			 &kp V		&cht LS(X) N 	&cht LS(W) LBKT		&kp NW
+				&cht1 HOME D_PW &cht LBRC LPAR  &kp LS(LALT) &tog THAI 	 &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   	&tog THAI 		&sk LSHFT 		&cht1 END D_NW
 			>;
 	};
 
