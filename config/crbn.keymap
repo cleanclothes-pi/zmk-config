@@ -107,7 +107,7 @@
 				// ===================================================================================================================+
 			bindings = <
 				&cht CAPS ESC	&kp	Q			&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &kp SEMI 				&cht FSLH MINUS
-				&sk LSHFT  		&hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   			&sk LSHFT
+				&sk LSHFT  		&hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   			&mt LSHFT SQT //sk LSHFT
 				&kp PW    		&kp Z			&cht LPAR X  &cht LBRC C  &kp D		   &kp V  				&kp K      	&kp H  			 &cht RBRC COMMA  &cht RPAR DOT &cht QMARK SQT  	&kp NW
 				&cht1 HOME D_PW &cht LBRC LPAR  &kp LS(LALT) &tog THAI 	  &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &sk LSHFT 				&cht1 END D_NW
 			>;
@@ -176,7 +176,7 @@
 				&trans    &cht LPAR COLON &kp KP_N7  &kp KP_N8 &kp KP_N9	&kp COMMA     					&kp BSLH	&kp GRAVE	&kp LT		&kp GT			&cht RPAR QMARK	&trans
 				&kp D_PW  &cht LBRC LPAR  &kp LS(LALT) &tog THAI  &lt EDIT TAB &lt NAV SPACE				&lt NUM BSPC &lt CONTROL RET &kp DEL  &tog THAI 	&cht RBRC RPAR  &kp D_NW
 			>;
-    };
+    }; 
 
 	// [6] EDIT = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	edit {
