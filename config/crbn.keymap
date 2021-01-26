@@ -100,9 +100,9 @@
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
 		};
-		th: thai_layer_tog {
+		thai: thai_layer_tog {
 			compatible = "zmk,behavior-hold-tap";
-			label = "tap switch OS input_holp layer toggle"
+			label = "Tap OSinput_Hold toggle";
 			#bindings-cells = <2>;
 			tapping_term_ms = <200>;
 			flavor = "balanced";
@@ -127,14 +127,14 @@
 				// |ESC/HOME |   A     |   R    |    S    |    T    |    G     ||      M    |     N     |    E    |    I    |    O    | '/END  |
 				// |   PW    |   Z     |   X,(  |   C,{   |    D    |    v     ||      K    |     H     |   , }   |    . )  |    /    |   NW   |
 				// |---------------------------------------------------------------------------------------------------------------------------|
-		 		// |  D_PW   | sl CONTR|   &th  |TAB/_EDIT| sk LSHFT| SPC/_NAV || BSPC/_NUM | RET/CONTR |   DEL   |   ____  |   )/}   |  D_NW  |
+		 		// |  D_PW   | sl CONTR|  &thai |TAB/_EDIT| sk LSHFT| SPC/_NAV || BSPC/_NUM | RET/CONTR |   DEL   |   ____  |   )/}   |  D_NW  |
 				// ============================================================================================================================+
 				// TAB/_EDIT
 			bindings = <
 				&kp CAPS 		&kp	Q			&kp W 		 &kp F 		  &kp P 	   &kp B  			&kp J		&kp L			 &kp U     		&kp Y    	 &kp SEMI 			&kp MINUS
 				&cht1 HOME ESC  &hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  			&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O 		&cht1 END  SQT
 				&kp PW    		&kp Z			&cht LPAR X  &cht LBRC C  &kp D		   &kp V  			&kp K      	&kp H  			 &cht RBRC COMMA  &cht RPAR DOT &kp FSLH  		&kp NW
-				&kp D_PW	&sl CONTROL	&th THAI LS(LALT) &lt EDIT TAB &sk LSHFT &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &sk LSHFT 			&kp D_NW
+				&kp D_PW   &sl CONTROL   &thai THAI LS(LALT)  &lt EDIT TAB &sk LSHFT  &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &sk LSHFT 			&kp D_NW
 			>;
 		};
 
