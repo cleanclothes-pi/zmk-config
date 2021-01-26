@@ -110,17 +110,17 @@
 		default_layer {
 
 				// ===================================================================================================================+
-				// |   ESC  |   Q    |   W   |    F   |    P   |    B    ||     J   |     L    |    U    |    Y    |    '"   |   - ;  |
-				// | sk SHFT|   A    |   R   |    S   |    T   |    G    ||     M   |     N    |    E    |    I    |    O    |sk LSHFT|
+				// |CAPS/TAB|   Q    |   W   |    F   |    P   |    B    ||     J   |     L    |    U    |    Y    |    ;    |   -    |
+				// |ESC/HOME|   A    |   R   |    S   |    T   |    G    ||     M   |     N    |    E    |    I    |    O    | '/END  |
 				// |    PW  |   Z    |   X,( |   C,{  |    D   |    v    ||     K   |     H    |   , }   |    . )  |    /    |   NW   |
 				// |------------------------------------------------------------------------------------------------------------------|
-		 		// |D_PW/HOME|sl CONTR|SFT+ALT|  THAI |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| sk LSHFT |  DEL  |   ____  |   )/}   |D_NW/END|
+		 		// |   D_PW |sl CONTR|SFT+ALT|  THAI |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| sk LSHFT |  DEL  |   ____  |   )/}   |D_NW/END|
 				// ===================================================================================================================+
 			bindings = <
-				&cht CAPS ESC	&kp	Q			&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &kp SQT 			&cht SEMI MINUS
-				&sk LSHFT  		&hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   		&sk LSHFT
+				&cht CAPS TAB	&kp	Q			&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &kp SEMI 			&kp MINUS
+				&cht1 HOME ESC  &hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   		&cht1 END SQT
 				&kp PW    		&kp Z			&cht LPAR X  &cht LBRC C  &kp D		   &kp V  				&kp K      	&kp H  			 &cht RBRC COMMA  &cht RPAR DOT &kp FSLH  		&kp NW
-				&cht1 HOME D_PW &sl CONTROL  &kp LS(LALT) &tog THAI 	  &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &sk LSHFT 		 &kp DEL   		&tog THAI 	 &sk LSHFT 			&cht1 END D_NW
+				&kp D_PW 		&sl EDIT  		&kp LS(LALT) &tog THAI 	  &sk LSHFT   &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &sk LSHFT 			&kp D_NW
 			>;
 		};
 
