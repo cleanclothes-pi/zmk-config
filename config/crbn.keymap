@@ -103,7 +103,7 @@
 		th: thai_layer_tog {
 			compatible = "zmk,behavior-hold-tap";
 			label = "tap switch OS input_holp layer toggle"
-			#bindings-celss = <2>;
+			#bindings-cells = <2>;
 			tapping_term_ms = <200>;
 			flavor = "balanced";
 			bindings = <&tog>, <&kp>;
