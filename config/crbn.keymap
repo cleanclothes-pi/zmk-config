@@ -130,7 +130,7 @@
 		 		// |  D_PW  |  ____  |  ____ | &thai |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |tog THAI |  ____   |  D_NW  |
 				// ===================================================================================================================+
 			bindings = <
-				&kp TAB			&kp	Q		 &kp W 		  &kp F 		  		&kp P 	   	 &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &cht COLON SEMI	&kp MINUS
+				&kp CAPS		&kp	Q		 &kp W 		  &kp F 		  		&kp P 	   	 &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &cht COLON SEMI	&kp MINUS
 				&cht1 HOME ESC  &hm2 LALT A  &hm LGUI R   &hm1 LSHFT S 			&hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   		&cht1 END SQT
 				&kp PW    		&kp Z		 &cht LPAR X  &cht LBRC C  			&cht LBKT D  &kp V  				&kp K      	&cht RBKT H		 &cht RBRC COMMA  &cht RPAR DOT &cht QMARK FSLH &kp NW
 				&kp D_PW 		&tog NUM	 &trans		  &thai LS(LALT) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &tog NAV 			&kp D_NW
