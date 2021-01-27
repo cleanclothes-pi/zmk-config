@@ -50,7 +50,7 @@
 			bindings = <&kp ESC>;
 		};
         combo_tab {
-			timeout-ms = <90>;
+			timeout-ms = <100>;
 			key-positions = <3 4>;
 			bindings = <&kp TAB>;
 		};
@@ -60,8 +60,8 @@
             bindings = <&kp RET>;
         };
 		combo_shift {
-            timeout-ms = <85>;
-            key-positions = <12 13>;
+            timeout-ms = <65>;
+            key-positions = <41 42>;
             bindings = <&sk LSHFT>;
         };
 	};
