@@ -123,27 +123,27 @@
 		default_layer {
 
 				// ===================================================================================================================+
-				// |CAPS/TAB|   Q    |   W   |    F   |    P   |    B    ||     J   |     L    |    U    |    Y    |    ;    |   -    |
+				// |  CAPS  |   Q    |   W   |    F   |    P   |    B    ||     J   |     L    |    U    |    Y    |    ; :  |   -    |
 				// |ESC/HOME|   A    |   R   |    S   |    T   |    G    ||     M   |     N    |    E    |    I    |    O    | '/END  |
-				// |    PW  |   Z    |   X,( |   C,{  |    D   |    v    ||     K   |     H    |   , }   |    . )  |    /    |   NW   |
+				// |    PW  |   Z    |   X,( |   C,{  |   D [  |    v    ||     K   |    H ]   |   , }   |    . )  |    /    |   NW   |
 				// |------------------------------------------------------------------------------------------------------------------|
-		 		// |   D_PW |sl CONTR|SFT+ALT|  THAI |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| sk LSHFT |  DEL  |   ____  |   )/}   |D_NW/END|
+		 		// |  D_PW  |  ____  |  ____ | &thai |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |tog THAI |  ____   |  D_NW  |
 				// ===================================================================================================================+
 			bindings = <
-				&cht CAPS TAB	&kp	Q			&kp W 		 &kp F 		  &kp P 	   &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &kp SEMI 			&kp MINUS
-				&cht1 HOME ESC  &hm2 LALT A 	&hm LGUI R   &hm1 LSHFT S &hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   		&cht1 END SQT
-				&kp PW    		&kp Z			&cht LPAR X  &cht LBRC C  &kp D		   &kp V  				&kp K      	&kp H  			 &cht RBRC COMMA  &cht RPAR DOT &kp FSLH  		&kp NW
-				&kp D_PW 	&sl EDIT  	&thai LS(LALT) THAI  &lt EDIT TAB &sk LSHFT    &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &sk LSHFT 			&kp D_NW
+				&kp TAB			&kp	Q		 &kp W 		  &kp F 		  		&kp P 	   	 &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &cht COLON SEMI	&kp MINUS
+				&cht1 HOME ESC  &hm2 LALT A  &hm LGUI R   &hm1 LSHFT S 			&hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   		&cht1 END SQT
+				&kp PW    		&kp Z		 &cht LPAR X  &cht LBRC C  			&cht LBKT D  &kp V  				&kp K      	&cht RBKT H		 &cht RBRC COMMA  &cht RPAR DOT &cht QMARK FSLH &kp NW
+				&kp D_PW 		&tog NUM	 &trans		  &thai LS(LALT) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &tog NAV 			&kp D_NW
 			>;
 		};
 
 	// [1] THAI = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	thai {
 			bindings = <
-				&cht LS(N) TAB	&kp L		&kp S		&kp U		&kp P		 &kp N0						&kp B		 &kp RBKT		 &kp COMMA	&kp X			&kp W			&trans
-				&cht1 HOME ESC	&kp SQT		&kp G		&hm1 LSHFT D	&kp O	 &kp F						&kp H		 &kp K			 &hm1 LSHFT J	&kp I		&kp SEMI		&cht1 END LS(H) 
-				&kp PW   		&kp C		&cht TH_LPAR T	&kp Y	&kp N8		 &kp MINUS					&kp N9		 &kp M			 &kp V		&cht TH_RPAR N 	&cht TH_DQT LBKT		&kp NW
-				&kp D_PW 		&sl EDIT  	&thai  LS(LALT) THAI &kp TAB &sl THUP   &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &sk LSHFT 		&kp D_NW
+				&kp LS(N)		&kp L		&kp S		&kp U		&kp P		 &kp N0							&kp B		 &kp RBKT		 &kp COMMA	&kp X			&kp W			&kp TH_DQT
+				&cht1 HOME ESC	&kp SQT		&kp G		&hm1 LSHFT D	&kp O	 &kp F							&kp H		 &kp K			 &hm1 LSHFT J	&kp I		&kp SEMI		&cht1 END LBKT 
+				&kp PW   		&kp C		&cht TH_LPAR T	&kp Y	&kp N8		 &kp MINUS						&kp N9		 &kp M			 &kp V		&cht TH_RPAR N 	&kp LS(H)		&kp NW
+				&kp D_PW 		&tog NUM	&trans		&thai LS(LALT) THAI  &lt EDIT TAB &lt NAV SPACE		&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &tog NAV 		&kp D_NW
 			>;
 	};
 
@@ -181,7 +181,7 @@
 				&kp S_ALL	 &kp REDO	&kp BSPC 	 &kp DEL 			&kp RET  		&kp PG_T			&kp PG_UP	&trans	 &trans		&trans	&trans		&trans
 				&cht HOME F2 &kp UNDO	&hm LGUI CUT &hm1 LSHFT COPY	&hm LCTRL PASTE	&kp PG_B			&kp PG_DN	&kp LEFT &kp DOWN	&kp UP	&kp RIGHT	&trans
 				&trans &kp K_APP &trans  &trans	&trans	&trans												&trans	&trans	&trans	&trans	&trans	&trans
-				&trans &trans 	&trans 	 &trans	&trans	&trans 												&trans 	&trans 	&trans 	&trans 	&trans 	&trans
+				&kp D_PW 		&tog NUM	 &trans		  &thai LS(LALT) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &tog NAV 			&kp D_NW
     		>;
     };
 
@@ -198,7 +198,7 @@
 				&trans    &kp PRCNT	   &kp KP_N1  &kp KP_N2	 &kp KP_N3  &kp CARET							&kp DLLR	&kp HASH	&kp AT		&kp EXCL	&kp COLON	&kp UNDER
 				&kp TILDE &kp KP_N0	   &kp KP_N4  &kp KP_N5	 &kp KP_N6	&kp DOT	     						&kp STAR	&kp EQUAL	&kp KP_MINUS	&kp KP_PLUS &kp AMPS	&kp PIPE
 				&trans    &cht LPAR COLON &kp KP_N7  &kp KP_N8 &kp KP_N9	&kp COMMA     					&kp BSLH	&kp GRAVE	&kp LT		&kp GT			&cht RPAR QMARK	&trans
-				&kp D_PW  &cht LBRC LPAR  &kp LS(LALT) &tog THAI  &lt EDIT TAB &lt NAV SPACE				&lt NUM BSPC &lt CONTROL RET &kp DEL  &tog THAI 	&cht RBRC RPAR  &kp D_NW
+				&trans &trans 	&trans 	 &trans	&trans	&trans 												&trans 	&trans 	&trans 	&trans 	&trans 	&trans
 			>;
     }; 
 
