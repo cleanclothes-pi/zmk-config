@@ -55,7 +55,7 @@
 			bindings = <&kp TAB>;
 		};
         combo_ret {
-            timeout-ms = <85>;
+            timeout-ms = <100>;
             key-positions = <2 3 4>;
             bindings = <&kp RET>;
         };
@@ -64,6 +64,11 @@
             key-positions = <41 42>;
             bindings = <&sk LSHFT>;
         };
+		combo_thup {
+			timeout-ms = <75>;
+			key-position = <40 43>;
+			bindings = <&sl THUP>;
+		};
 	};
 	behaviors {
 		hm: homerow_mods {
@@ -127,7 +132,7 @@
 				// |ESC/HOME|   A    |   R   |    S   |    T   |    G    ||     M   |     N    |    E    |    I    |    O    | '/END  |
 				// |    PW  |   Z    |   X,( |   C,{  |   D [  |    v    ||     K   |    H ]   |   , }   |    . )  |    /    |   NW   |
 				// |------------------------------------------------------------------------------------------------------------------|
-		 		// |  D_PW  |  ____  |  ____ | &thai |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |tog THAI |  ____   |  D_NW  |
+		 		// |  D_PW  | tog NUM|  ____ | &thai |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |tog THAI | tog NAV |  D_NW  |
 				// ===================================================================================================================+
 			bindings = <
 				&kp CAPS		&kp	Q		 &kp W 		  &kp F 		  		&kp P 	   	 &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &cht COLON SEMI	&kp MINUS
