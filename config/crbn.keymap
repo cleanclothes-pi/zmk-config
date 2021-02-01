@@ -148,7 +148,7 @@
 			bindings = <
 				&kp LS(N)		&kp C		&kp T		&kp U		&kp P		 &kp N0							&kp B		 &kp RBKT		 &kp COMMA	&kp X			&kp W			&kp TH_DQT
 				&cht1 HOME ESC	&kp SQT		&kp G		&hm1 LSHFT D	&kp O	 &kp F							&kp H		 &kp K			 &hm1 LSHFT J	&kp I		&kp SEMI		&cht1 END LBKT 
-				&kp PW   		&kp L		&cht TH_LPAR S		&kp Y		&kp N8		 &kp MINUS						&kp N9		 &kp M			 &kp V		&cht TH_RPAR N 	&kp LS(H)		&kp NW
+				&kp PW   		&kp L		&cht TH_LPAR S	&kp Y	&kp N8		 &kp MINUS						&kp N9		 &kp M			 &kp V		&cht TH_RPAR N 	&kp LS(H)		&kp NW
 				&kp D_PW 		&tog NUM	&trans		&thai LS(LALT) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &tog NAV 		&kp D_NW
 			>;
 	};
