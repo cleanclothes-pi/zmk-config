@@ -148,7 +148,7 @@
 			bindings = <
 				&kp LS(N)		&kp C		&kp T		&kp U		&kp P		 &kp N0							&kp B		 &kp RBKT		 &kp COMMA	&kp X			&kp W			&kp TH_DQT
 				&cht1 HOME ESC	&kp SQT		&kp G		&hm1 LSHFT D	&kp O	 &kp F							&kp H		 &kp K			 &hm1 LSHFT J	&kp I		&kp SEMI		&cht1 END LBKT 
-				&kp PW   		&kp L		&kp S		&kp Y		&kp N8		 &kp MINUS						&kp N9		 &kp M			 &cht TH_RPAR V		&kp N 	&kp LS(H)		&kp NW
+				&kp PW   		&kp L		&cht TH_LPAR S		&kp Y		&kp N8		 &kp MINUS						&kp N9		 &kp M			 &kp V		&cht TH_RPAR N 	&kp LS(H)		&kp NW
 				&kp D_PW 		&tog NUM	&trans		&thai LS(LALT) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &tog NAV 		&kp D_NW
 			>;
 	};
@@ -158,7 +158,7 @@
 			bindings = <
 				&trans	&kp LS(A) &kp Q	&kp LS(F)	&kp N5	    &kp LS(E)			&kp LS(LBKT)	&kp N4	&kp LS(K)	&kp LS(COMMA)	&kp LS(U)	&kp LS(DOT)
 				&trans	&kp R	&kp EQUAL	&kp Z	&kp LS(N6)	&kp LS(D)			&kp LS(V)	&kp N6	&kp N7	&kp E	&kp LS(I)	&kp LS(S)
-				&trans	&kp A	&cht TH_LPAR LS(R) &kp DOT &kp LS(P) &kp LS(C)		&kp FSLH	&kp LS(L)	&kp LS(SEMI)	&kp LS(T)	&kp LS(J)	&kp LS(G)
+				&trans	&kp A	&kp LS(R) 	&kp DOT &kp LS(P) 	&kp LS(C)			&kp FSLH	&kp LS(L)	&kp LS(SEMI)	&kp LS(T)	&kp LS(J)	&kp LS(G)
 				&trans	&trans	&trans	&trans	&trans	&trans						&trans	&trans	&trans	&trans	&trans	&trans
 
 			>;
