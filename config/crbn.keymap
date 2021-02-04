@@ -244,3 +244,12 @@
 
   };
 };
+
+/*
+TODO:
+	- move bluetooth to a separate layer (avoid wrong press from frequent layer switching)
+	- move F-keys to _CONTR layer on left hand
+	- add OSinput switch for Linux
+	- assign sticky key for bluetooth and OSinput/lang switch on bottom row
+	- move S_ALL and UNDO keys
+*/
