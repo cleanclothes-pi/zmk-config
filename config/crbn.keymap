@@ -101,7 +101,7 @@
 			label = "Tap par_hold brc";
 			#binding-cells = <2>;
 			tapping_term_ms = <160>;
-			flavor = "tapp-preferred";
+			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
 		cht1: custom_hold_tap1 {
