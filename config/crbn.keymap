@@ -149,17 +149,17 @@
 				&kp LS(N)		&kp MINUS	&kp X	&kp F	&kp RBKT	&kp N0									&kp T	&kp Y	&kp P	&kp U	&kp W	&kp TH_DQT
 				&cht1 HOME ESC	&kp COMMA	&kp SQT	&kp D	&kp O	&kp L										&kp H	&kp K	&kp J	&kp I	&kp SEMI	&cht1 END LS(H)
 				&kp PW			&kp LBKT	&kp N9	&kp M	&kp N8	&kp S										&kp B	&kp G	&kp V	&kp N	&kp C	&kp NW
-				&kp D_PW 		&tog NUM	&trans		&thai LS(LALT) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &tog NAV 		&kp D_NW
+				&kp D_PW 		&tog NUM	&trans	&thai LS(LALT) THAI  &lt EDIT TAB &lt NAV SPACE				&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &tog NAV 		&kp D_NW
 			>;
 	};
 
 	// [2] THAI UPPER = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	thaiup {
 			bindings = <
-				&trans	&kp LS(A)	&kp Q	&kp N4	&kp LS(K)	&kp LS(E)			&kp LS(LBKT)	&kp N7	&kp LS(F)	&kp LS(T)		&kp LS(U)	&kp LS(DOT)
-				&trans	&kp LS(SEMI)	&kp R	&kp EQUAL	&kp N5	&kp LS(D)		&kp LS(V)	&kp N6		&kp LS(6)	&kp DOT			&kp E		&kp LS(S)
-				&trans	&kp A	&kp LS(R)	&kp Z	&kp LS(L)	&kp LS(C)			&kp FSLH	&kp LS(P)	&kp LS(I)	&kp LS(COMMA)	&kp LS(J)	&kp LS(G)
-				&trans	&trans	&trans	&trans	&trans	&trans						&trans	&trans	&trans	&trans	&trans	&trans
+				&trans	&kp LS(A)		&kp Q		&kp N4		&kp LS(K)	&kp LS(E)			&kp LS(LBKT)	&kp N7		&kp LS(F)	&kp LS(T)		&kp LS(U)	&kp LS(DOT)
+				&trans	&kp LS(SEMI)	&kp R		&kp EQUAL	&kp N5		&kp LS(D)			&kp LS(V)		&kp N6		&kp LS(N6)	&kp DOT			&kp E		&kp LS(S)
+				&trans	&kp A			&kp LS(R)	&kp Z		&kp LS(L)	&kp LS(C)			&kp FSLH		&kp LS(P)	&kp LS(I)	&kp LS(COMMA)	&kp LS(J)	&kp LS(G)
+				&trans	&trans	&trans	&trans	&trans	&trans									&trans	&trans	&trans	&trans	&trans	&trans
 
 			>;
 	};
