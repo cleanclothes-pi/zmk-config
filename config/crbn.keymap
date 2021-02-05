@@ -146,9 +146,9 @@
 	// [1] THAI = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	thai {
 			bindings = <
-				&kp LS(N)		&kp C		&kp T		&kp U		&kp P		 &kp N0							&kp B		 &kp RBKT		 &kp COMMA	&kp X			&kp W			&kp TH_DQT
-				&cht1 HOME ESC	&kp SQT		&kp G		&hm1 LSHFT D	&kp O	 &kp F							&kp H		 &kp K			 &hm1 LSHFT J	&kp I		&kp SEMI		&cht1 END LBKT 
-				&kp PW   		&kp L		&cht TH_LPAR S	&kp Y	&kp N8		 &kp MINUS						&kp N9		 &kp M			 &kp V		&cht TH_RPAR N 	&kp LS(H)		&kp NW
+				&kp LS(N)		&kp MINUS	&kp X	&kp F	&kp RBKT	&kp N0									&kp T	&kp Y	&kp P	&kp U	&kp W	&kp TH_DQT
+				&cht1 HOME ESC	&kp COMMA	&kp SQT	&kp D	&kp O	&kp L										&kp H	&kp K	&kp J	&kp I	&kp SEMI	&cht1 END LS(H)
+				&kp PW			&kp LBKT	&kp N9	&kp M	&kp N8	&kp S										&kp B	&kp G	&kp V	&kp N	&kp C	&kp NW
 				&kp D_PW 		&tog NUM	&trans		&thai LS(LALT) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL   		&tog THAI 	 &tog NAV 		&kp D_NW
 			>;
 	};
@@ -156,9 +156,9 @@
 	// [2] THAI UPPER = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	thaiup {
 			bindings = <
-				&trans	&kp LS(A) &kp Q	&kp LS(F)	&kp N5	    &kp LS(E)			&kp LS(LBKT)	&kp N4	&kp LS(K)	&kp LS(COMMA)	&kp LS(U)	&kp LS(DOT)
-				&trans	&kp R	&kp EQUAL	&kp Z	&kp LS(N6)	&kp LS(D)			&kp LS(V)	&kp N6	&kp N7	&kp E	&kp LS(I)	&kp LS(S)
-				&trans	&kp A	&kp LS(R) 	&kp DOT &kp LS(P) 	&kp LS(C)			&kp FSLH	&kp LS(L)	&kp LS(SEMI)	&kp LS(T)	&kp LS(J)	&kp LS(G)
+				&trans	&kp LS(A)	&kp Q	&kp N4	&kp LS(K)	&kp LS(E)			&kp LS(LBKT)	&kp N7	&kp LS(F)	&kp LS(T)		&kp LS(U)	&kp LS(DOT)
+				&trans	&kp LS(SEMI)	&kp R	&kp EQUAL	&kp N5	&kp LS(D)		&kp LS(V)	&kp N6		&kp LS(6)	&kp DOT			&kp E		&kp LS(S)
+				&trans	&kp A	&kp LS(R)	&kp Z	&kp LS(L)	&kp LS(C)			&kp FSLH	&kp LS(P)	&kp LS(I)	&kp LS(COMMA)	&kp LS(J)	&kp LS(G)
 				&trans	&trans	&trans	&trans	&trans	&trans						&trans	&trans	&trans	&trans	&trans	&trans
 
 			>;
