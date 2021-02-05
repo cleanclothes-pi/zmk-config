@@ -156,10 +156,10 @@
 	// [2] THAI UPPER = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	thaiup {
 			bindings = <
-				&trans	&kp LS(A)		&kp Q		&kp N4		&kp LS(K)	&kp LS(E)			&kp LS(LBKT)	&kp N7		&kp LS(F)	&kp LS(T)		&kp LS(U)	&kp LS(DOT)
-				&trans	&kp LS(SEMI)	&kp R		&kp EQUAL	&kp N5		&kp LS(D)			&kp LS(V)		&kp N6		&kp LS(N6)	&kp DOT			&kp E		&kp LS(S)
-				&trans	&kp A			&kp LS(R)	&kp Z		&kp LS(L)	&kp LS(C)			&kp FSLH		&kp LS(P)	&kp LS(I)	&kp LS(COMMA)	&kp LS(J)	&kp LS(G)
-				&trans	&trans			&trans		&trans		&trans		&trans				&trans			&trans		&trans		&trans			&trans		&trans
+				&trans	&kp LS(A)	&kp Q		&kp N4		&kp LS(K)	&kp LS(E)			&kp LS(LBKT)	&kp N7		&kp LS(F)	&kp LS(T)		&kp LS(U)	&kp LS(DOT)
+				&trans	&kp Z		&kp R		&kp EQUAL	&kp N5		&kp LS(D)			&kp LS(V)		&kp N6		&kp LS(N6)	&kp DOT			&kp E		&kp LS(S)
+				&trans	&kp A		&kp LS(R)	&kp LS(L)	&kp LS(SEMI) &kp LS(C)			&kp FSLH		&kp LS(P)	&kp LS(I)	&kp LS(COMMA)	&kp LS(J)	&kp LS(G)
+				&trans	&trans		&trans		&trans		&trans		&trans				&trans			&trans		&trans		&trans			&trans		&trans
 			>;
 	};
 
