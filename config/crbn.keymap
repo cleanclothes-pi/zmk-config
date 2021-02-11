@@ -139,7 +139,7 @@
 				&kp CAPS		&kp	Q		 &kp W 		  &kp F 		  		&kp P 	   	 &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &cht COLON SEMI	&kp MINUS
 				&cht1 HOME ESC  &hm2 LALT A  &hm LGUI R   &hm1 LSHFT S 			&hm LCTRL T  &kp G  				&kp M  		&hm RCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   		&cht1 END SQT
 				&kp PW    		&kp Z		 &cht LPAR X  &cht LBRC C  			&cht LBKT D  &kp V  				&kp K      	&cht RBKT H		 &cht RBRC COMMA  &cht RPAR DOT &cht QMARK FSLH &kp NW
-				&kp D_PW 		&tog NUM	 &trans		  &thai LA(CAPS) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL  &thai LA(LSHFT) THAI  &tog NAV 			&kp D_NW
+				&kp D_PW 		&tog NUM	 &kp LA(CAPS) &thai LA(CAPS) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL  &thai LA(LSHFT) THAI  &tog NAV 			&kp D_NW
 			>;
 		};
 
