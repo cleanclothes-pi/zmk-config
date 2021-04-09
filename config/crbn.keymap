@@ -42,7 +42,7 @@
 #define TH_DQT	LS(W)
 
 &sk {
-	release-after-ms = <130>;
+	release-after-ms = <150>;
 };
 
 / {
