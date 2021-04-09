@@ -41,6 +41,10 @@
 #define TH_RPAR LS(X)
 #define TH_DQT	LS(W)
 
+&sk {
+	release-after-ms = <100>;
+};
+
 / {
 	combos {
 		compatible = "zmk,combos";
@@ -123,10 +127,6 @@
 			flavor = "balanced";
 			bindings = <&kp>, <&tog>;
 		};
-	};
-
-	&sk {
-		release-after-ms = <100>;
 	};
 
 	keymap {
