@@ -48,7 +48,6 @@
 	combos {
 		compatible = "zmk,combos";
 		combo_shift {
-            // timeout-ms = <65>;
             key-positions = <41 42>;
             bindings = <&sk LSHFT>;
 			layers = < 0 >;
@@ -56,6 +55,7 @@
 	};
 
 	behaviors {
+
 		hm: homerow_mods {
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
@@ -64,6 +64,7 @@
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
+
 		hm1: homerow_mods1 {
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
@@ -93,14 +94,6 @@
 			label = "Tap par_hold brc";
 			#binding-cells = <2>;
 			tapping_term_ms = <210>;
-			flavor = "balanced";
-			bindings = <&kp>, <&kp>;
-		};
-		th: thai_hold_tap {
-			compatible = "zmk,behavior-hold-tap";
-			label = "holdlyr2_taplyr1";
-			#binding-cells = <2>;
-			tapping_term_ms = <160>;
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
 		};
@@ -145,10 +138,10 @@
 		 		// |  D_PW  | tog NUM|  ____ | &thai |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |tog THAI | tog NAV |  D_NW  |
 				// ===================================================================================================================+
 			bindings = <
-				&kp CAPS        &th MINUS LS(A)	&th LBKT Q	    &th F LS(T)	        &th M LS(K)	    &th N0 LS(V)		        &th B LS(E)	    &th Y LS(LBKT)	&th P N4	    &th U LS(D)	&th LS(H) LS(U)	&th LS(N) LS(DOT)
-				&cht1 HOME ESC	&th COMMA Z	&th D R	            &th SQT EQUAL	    &th O N5	    &th L N7		            &th H LS(F)	    &th J N6	    &th K LS(6)	    &th I DOT	&th SEMI E	    &th W LS(S)
-				&kp PW	        &th X A	    &th N9 LS(COMMA)	&th N8 LS(L)	    &th RBKT LS(P)	&th S LS(C)		            &th T FSLH	    &th G LS(I)	    &th V LS(SEMI)	&th N LS(R)	&th C LS(J)	    &kp NW
-				&kp D_PW 		&tog NUM	&trans	            &thai LA(CAPS) THAI &lt EDIT TAB 	&lt NAV SPACE				&lt NUMPAD BSPC &lt CONTROL RET &kp DEL         &trans 	    &tog NAV 	    &kp D_NW
+				&kp CAPS        &cht MINUS LS(A) &cht LBKT Q	    &cht F LS(T)	    &cht M LS(K)	&cht N0 LS(V)		        &cht B LS(E)	&cht Y LS(LBKT)	&cht P N4	    &cht U LS(D) &cht LS(H) LS(U)	&cht LS(N) LS(DOT)
+				&cht1 HOME ESC	&cht COMMA Z	 &cht D R	        &cht SQT EQUAL	    &cht O N5	    &cht L N7		            &cht H LS(F)	&cht J N6	    &cht K LS(6)    &cht I DOT	 &cht SEMI E	    &cht W LS(S)
+				&kp PW	        &cht X A	     &cht N9 LS(COMMA)	&cht N8 LS(L)	    &cht RBKT LS(P)	&cht S LS(C)		        &cht T FSLH	    &cht G LS(I)	&cht V LS(SEMI)	&cht N LS(R) &cht C LS(J)	    &kp NW
+				&kp D_PW 		&tog NUM	     &trans	            &thai LA(CAPS) THAI &lt EDIT TAB 	&lt NAV SPACE				&lt NUMPAD BSPC &lt CONTROL RET &kp DEL         &trans 	     &tog NAV 	        &kp D_NW
 			>;
 	};
 
