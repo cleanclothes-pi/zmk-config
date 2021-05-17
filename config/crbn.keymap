@@ -65,7 +65,7 @@
         //     bindings = <&kp RET>;
         // };
 		combo_shift {
-            timeout-ms = <65>;
+            // timeout-ms = <65>;
             key-positions = <41 42>;
             bindings = <&sk LSHFT>;
 			layers = < 0 >;
@@ -153,9 +153,9 @@
 	// [1] THAI = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	thai {
 				// ===================================================================================================================+
-				// |  CAPS  |   ข    |   ป   |    ด   |    ท   |   จ    ||     ิ   |     ั    |    ย    |      ี    |    ็    |     ์      |
-				// |   ESC  |   ม    |   ง   |    ก   |    น   |    ส    ||     ้   |      ่    |    า    |    ร    |    ว    |     ไ   |
-				// |    PW  |   บ    |   ต   |   ค (  |    ล   |    ห   ||      ะ   |     เ   |    อ )   |      ื   |    แ    |   NW   |
+				// |  CAPS  |   ข    |   ป   |    ด   |    ท   |    จ   ||     ิ    |     ั    |    ย    |      ี    |    ็    |     ์      |
+				// |   ESC  |   ม    |   ง   |    ก   |    น   |    ส   ||     ้    |      ่    |    า    |    ร    |    ว    |     ไ   |
+				// |    PW  |   บ    |   ต   |   ค (  |    ล   |    ห   ||     ะ    |     เ   |    อ )   |      ื   |    แ    |   NW   |
 				// |------------------------------------------------------------------------------------------------------------------|
 		 		// |  D_PW  | tog NUM|  ____ | &thai |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |tog THAI | tog NAV |  D_NW  |
 				// ===================================================================================================================+
@@ -213,7 +213,7 @@
 			// ===================================================================================================+
 			bindings = <
 				&trans		 &kp SAVE	&kp K_APP 	 &kp DEL 			&kp RET  		&kp PG_T					&kp PG_UP	&trans	 &trans		&trans	&trans		&trans
-				&cht HOME F2 &kp S_ALL	&hm LGUI CUT &hm1 LSHFT COPY	&hm LCTRL PASTE	&kp PG_B					&kp PG_DN	&kp LEFT &kp DOWN	&kp UP	&kp RIGHT	&trans
+				&cht HOME F2 &hm LALT S_ALL	&hm LGUI CUT &hm1 LSHFT COPY	&hm LCTRL PASTE	&kp PG_B					&kp PG_DN	&kp LEFT &kp DOWN	&kp UP	&kp RIGHT	&trans
 				&trans 		 &kp UNDO	&kp REDO  	 &trans				&kp K_APP		&trans						&trans		&trans	 &trans		&trans	&trans		&trans
 				&kp D_PW 	&tog NUM	 &trans  &thai LA(CAPS) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL  &trans  &tog NAV 			&kp D_NW
     		>;
