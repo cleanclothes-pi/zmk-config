@@ -47,34 +47,12 @@
 / {
 	combos {
 		compatible = "zmk,combos";
-
-		// combo_esc {
-		// 	timeout-ms = <80>;
-		// 	key-positions = <2 3>;
-		// 	bindings = <&kp ESC>;
-		// };
-        // combo_tab {
-		// 	timeout-ms = <100>;
-		// 	key-positions = <3 4>;
-		// 	bindings = <&kp TAB>;
-		// };
-        // combo_ret {
-        //     timeout-ms = <110>;
-        //     key-positions = <2 3 4>;
-        //     bindings = <&kp RET>;
-        // };
 		combo_shift {
             // timeout-ms = <65>;
             key-positions = <41 42>;
             bindings = <&sk LSHFT>;
 			layers = < 0 >;
         };
-		/* combo_thup { */
-		/* 	timeout-ms = <75>; */
-		/* 	key-positions = <41 42>; */
-		/* 	bindings = <&sl THUP>; */
-		/* 	layers = < 1 >; */
-		/* }; */
 	};
 
 	behaviors {
