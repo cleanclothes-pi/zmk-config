@@ -83,7 +83,7 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "Tap par_hold brc";
 			#binding-cells = <2>;
-			tapping_term_ms = <160>;
+			tapping_term_ms = <150>;
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
@@ -129,16 +129,16 @@
 	// [1] THAI = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	thai {
 				// ===================================================================================================================+
-				// |  CAPS  |  ข/ฤ   |  บ/ๆ   |   ด/ธ  |   ท/ษ  |   จ/ฮ  ||    ิ/ฎ  |   ั/ฐ    |   ย/ภ   |   ี/ฏ   |   ็/ ๊  |   ์/ฬ  |
-				// |   ESC  |  ม/ผ   |  ก/พ  |   ง/ช  |   น/ถ  |   ส/ึ   ||   ้/โ   |   ่ / ุ   |   า/ ู   |   ร/ใ   |   ว/ ำ  |   ไ/ฆ  |
-				// |    PW  |  ป/ฟ   |  ต/ฒ  |   ค/ศ  |   ล/ญ  |   ห/ฉ  ||   ะ/ฝ   |  เ / ณ   |   อ/ซ   |   ื /ฑ |    แ/ ๋  |   NW   |
+				// |  CAPS  |  ข/ฤ   |  ป/ๆ   |   ด/ธ  |   ท/ษ  |   จ/ฮ  ||    ิ/ฎ  |   ั/ฐ    |   ย/ภ   |   ี/ฏ   |   ็/ ๊  |   ์/ฬ  |
+				// |   ESC  |  ม/ผ   |  ง/พ  |   ก/ช  |   น/ถ  |   ส/ึ   ||   ้/โ   |   ่ / ุ   |   า/ ู   |   ร/ใ   |   ว/ ำ  |   ไ/ฆ  |
+				// |    PW  |  บ/ฟ   |  ต/ฒ  |   ค/ศ  |   ล/ญ  |   ห/ฉ  ||   ะ/ฝ   |  เ / ณ   |   อ/ซ   |   ื /ฑ |    แ/ ๋  |   NW   |
 				// |------------------------------------------------------------------------------------------------------------------|
 		 		// |  D_PW  | tog NUM|  ____ | &thai |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |tog THAI | tog NAV |  D_NW  |
 				// ===================================================================================================================+
 			bindings = <
-				&kp EQUAL	   &cht LS(A) MINUS &cht Q LBKT       &cht LS(T) F   &cht LS(K) M    &cht LS(V) N0       &cht LS(E) B    &cht LS(LBKT) Y &cht N4 P       &cht LS(D) U &cht LS(U) LS(H) &cht1 LS(DOT) LS(N)
-				&cht1 HOME ESC &cht Z COMMA     &cht R D          &cht EQUAL SQT &cht N5 O       &cht N7 L           &cht LS(F) H    &cht N6 J       &cht LS(N6) K   &cht DOT I   &cht E SEMI      &cht LS(S) W 
-				&kp PW         &cht X A         &cht N9 LS(COMMA) &cht LS(L) N8  &cht LS(P) RBKT &cht LS(C) S		 &cht FSLH T     &cht LS(I) G    &cht LS(SEMI) V &cht LS(R) N &cht LS(J) C     &kp NW
+				&kp EQUAL	   &cht LS(A) MINUS &cht Q X          &cht LS(T) F   &cht LS(K) M    &cht LS(V) N0       &cht LS(E) B    &cht LS(LBKT) Y &cht N4 P       &cht LS(D) U &cht LS(U) LS(H) &cht1 LS(DOT) LS(N)
+				&cht1 HOME ESC &cht Z COMMA     &cht R SQT        &cht EQUAL D   &cht N5 O       &cht N7 L           &cht LS(F) H    &cht N6 J       &cht LS(N6) K   &cht E I     &cht DOT SEMI    &cht LS(S) W 
+				&kp PW         &cht A LBKT      &cht LS(COMMA) N9 &cht LS(L) N8  &cht LS(P) RBKT &cht LS(C) S		 &cht FSLH T     &cht LS(I) G    &cht LS(SEMI) V &cht LS(R) N &cht LS(J) C     &kp NW
 				&kp D_PW 	   &tog NUM	        &trans	    &thai LS(CAPS) THAI  &lt EDIT TAB    &lt NAV SPACE	     &lt NUMPAD BSPC &lt CONTROL RET &kp DEL         &trans       &tog NAV      &kp D_NW
 			>;
 	};
