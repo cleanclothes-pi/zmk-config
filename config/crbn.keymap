@@ -136,10 +136,10 @@
 		 		// |  D_PW  | tog NUM|  ____ | &thai |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |tog THAI | tog NAV |  D_NW  |
 				// ===================================================================================================================+
 			bindings = <
-				&kp EQUAL		&cht MINUS LS(A)  &cht LBKT Q   &cht F LS(T)  &cht M LS(K)	&cht N0 LS(V)			&cht B LS(E) &cht Y LS(LBKT) &cht P N4     &cht U LS(D) &cht LS(H) LS(U) &cht1 LS(N) LS(DOT)
-				&cht1 HOME ESC 	&cht COMMA Z &cht D R &cht SQT EQUAL    &cht O N5        &cht L N7                    &cht H LS(F) &cht J N6       &cht K LS(N6) &cht I DOT   &cht SEMI E      &cht W LS(S)
-				&kp PW			&cht X A    &cht N9 LS(COMMA) &cht LS(L) N8  &cht LS(P) RBKT &cht LS(C) S			&cht FSLH T     &cht LS(I) G	&cht LS(SEMI) V		&cht LS(R) N	&cht LS(J) C &kp NW
-				&kp D_PW 		&tog NUM	&trans	&thai LA(CAPS) THAI  &lt EDIT TAB 	&lt NAV SPACE				&lt NUMPAD BSPC &lt CONTROL RET &kp DEL   &trans 	&tog NAV 	&kp D_NW
+				&kp EQUAL	   &cht MINUS LS(A) &cht LBKT Q       &cht F LS(T)   &cht M LS(K)	 &cht N0 LS(V)			&cht B LS(E)    &cht Y LS(LBKT) &cht P N4       &cht U LS(D) &cht LS(H) LS(U) &cht1 LS(N) LS(DOT)
+				&cht1 HOME ESC &cht COMMA Z     &cht D R          &cht SQT EQUAL &cht O N5       &cht L N7              &cht H LS(F)    &cht J N6       &cht K LS(N6)   &cht I DOT   &cht SEMI E      &cht W LS(S)
+				&kp PW		   &cht X A         &cht N9 LS(COMMA) &cht LS(L) N8  &cht LS(P) RBKT &cht LS(C) S			&cht FSLH T     &cht LS(I) G	&cht LS(SEMI) V	&cht LS(R) N &cht LS(J) C     &kp NW
+				&kp D_PW 	   &tog NUM	        &trans	    &thai LA(CAPS) THAI  &lt EDIT TAB 	 &lt NAV SPACE			&lt NUMPAD BSPC &lt CONTROL RET &kp DEL         &trans 	     &tog NAV 	      &kp D_NW
 			>;
 	};
 
