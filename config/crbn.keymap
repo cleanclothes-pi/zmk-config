@@ -40,10 +40,6 @@
 #define TH_RPAR LS(X)
 #define TH_DQT	LS(W)
 
-&sk {
-	release-after-ms = <165>;
-};
-
 / {
 	combos {
 		compatible = "zmk,combos";
