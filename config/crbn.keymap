@@ -136,7 +136,7 @@
 		 		// |  D_PW  | tog NUM|  ____ | &thai |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |tog THAI | tog NAV |  D_NW  |
 				// ===================================================================================================================+
 			bindings = <
-				&kp EQUAL	   &cht LS(A) MINUS &cht Q X          &cht LS(T) F   &cht LS(K) M    &cht LS(V) N0       &cht LS(E) B    &cht LS(LBKT) Y &cht N4 P       &cht LS(D) U &cht LS(U) LS(H) &cht1 LS(DOT) LS(N)
+				&kp EQUAL	   &cht LS(A) MINUS &cht Q X          &cht LS(T) M   &cht LS(K) F    &cht LS(V) N0       &cht LS(E) B    &cht LS(LBKT) Y &cht N4 P       &cht LS(D) U &cht LS(U) LS(H) &cht1 LS(DOT) LS(N)
 				&cht1 HOME ESC &cht Z COMMA     &cht R SQT        &cht EQUAL D   &cht N5 O       &cht N7 L           &cht LS(F) H    &cht N6 J       &cht LS(N6) K   &cht E I     &cht DOT SEMI    &cht LS(S) W 
 				&kp PW         &cht A LBKT      &cht LS(COMMA) N9 &cht LS(L) N8  &cht LS(P) RBKT &cht LS(C) S		 &cht FSLH T     &cht LS(I) G    &cht LS(SEMI) V &cht LS(R) N &cht LS(J) C     &kp NW
 				&kp D_PW 	   &tog NUM	        &trans	    &thai LS(CAPS) THAI  &lt EDIT TAB    &lt NAV SPACE	     &lt NUMPAD BSPC &lt CONTROL RET &kp DEL         &trans       &tog NAV      &kp D_NW
