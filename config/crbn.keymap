@@ -103,7 +103,7 @@
 			compatible = "zmk,behavior-macro";
 			label = "THMACRO";
 			#binding-cells = <0>;
-			bindings = <&kp LS(RSHFT)>, <&tog THAI>;
+			bindings = <&kp LS(RS(RSHFT))>, <&tog THAI>;
 		};
 	};
 
