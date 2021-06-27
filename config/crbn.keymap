@@ -99,6 +99,12 @@
 			flavor = "balanced";
 			bindings = <&kp>, <&tog>;
 		};
+		thmacro: thmacro {
+			compatible = "zmk,behavior-macro";
+			label = "THMACRO";
+			#binding-cells = <0>;
+			bindings = <&kp LS(CAPS)>, <&tog THAI>;
+		};
 	};
 
 	keymap {
@@ -118,7 +124,7 @@
 				&kp CAPS		&kp	Q		 &kp W 		  &kp F 		  		&kp P 	   	 &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &cht COLON SEMI	&kp MINUS
 				&cht1 HOME ESC  &hm2 LALT A  &hm LGUI R   &hm1 LSHFT S 			&hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   		&cht1 END SQT
 				&kp PW    		&kp Z		 &cht1 LBKT X  &cht1 LPAR C  		&cht1 LBRC D  &kp V  				&kp K      	&cht1 RBRC H		 &cht1 RPAR COMMA  &cht1 RBKT DOT &cht QMARK FSLH &kp NW
-				&kp D_PW 		&tog NUM	 &trans  &thai LS(CAPS) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL  &trans  &tog NAV 			&kp D_NW
+				&kp D_PW 		&tog NUM	 &thmacro  &thai LS(CAPS) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL  &trans  &tog NAV 			&kp D_NW
 			>;
 		};
 
