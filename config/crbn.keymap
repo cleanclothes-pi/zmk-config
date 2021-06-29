@@ -212,8 +212,7 @@
 	// [6] WM = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	wm {
 			// TODO:
-			//   - list all window manager shortcut keys
-			//   - assign place
+			//   - list all window manager shortcut keys && assign place
 			// --------------------------------------------------------------------------------------------------+
 			// |  ____ |  ____ |scrn_l |clnt_up|scrn_r |  ____ ||  ____ | WS_1  | WS_2  | WS_3  | ____  |  ____  |
 			// |  ____ |width+ |  ws_l |clnt_dn| ws_r  |width- ||  ____ | WS_4  | WS_5  | WS_6  | ____  |  ____  |
@@ -222,8 +221,8 @@
 			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ==================================================================================================+			
 			bindings = <
-				&trans	&trans		&kp LG(LC(J)) &kp LC(K) &kp LG(LC(K))	  &trans				&trans	&kp WS_1 &kp WS_2 &kp WS_3 &trans &trans
-				&trans	&kp LG(H) &kp LG(LEFT) &hm LSHFT LC(J)	&hm LCTRL LG(RIGHT) &kp LG(L)		&trans	&hm LCTRL WS_4 &hm LSHFT WS_5 &kp WS_6 &trans &trans
+				&trans	&trans		&kp LG(LC(J)) &kp LG(K) &kp LG(LC(K))	  &trans				&trans	&kp WS_1 &kp WS_2 &kp WS_3 &trans &trans
+				&trans	&kp LG(H) &kp LG(LEFT) &hm LSHFT LG(J)	&hm LCTRL LG(RIGHT) &kp LG(L)		&trans	&hm LCTRL WS_4 &hm LSHFT WS_5 &kp WS_6 &trans &trans
 				&trans	&trans      &trans      &trans		&kp LC(Q)	&trans						&trans	&trans 	&trans  &trans  &trans	&trans
 				&trans	&trans		&trans		&trans		&trans		&trans						&trans	&trans	&trans	&trans	&trans	&trans
 
@@ -235,16 +234,16 @@
 			// TODO:
 			//   
 			// -------------------------------------------------------------------------------------------+
-			// |BOOTLD| ____ |  F1  |  F2  |  F3  | F10  || ____ | B_TOG | B_DN  | B_UP  | ____ |ZOOMIN|
-			// |RESET | ____ |  F4  |  F5  |  F6  | F11  || ____ | v_MUTE| V_DN  | v_UP  | ____ |ZOOMOUT|
-			// |BT_CLR| ____ |  F7  |  F8  |  F9  | F12  || ____ | M_STOP| M_PRV | M_NXT | M_PP | ____ |
+			// | ____ | F10  |  F1  |  F2  |  F3  | ____ || ____ | B_TOG | B_DN  | B_UP  | ____ |ZOOMIN|
+			// | ____ | F11  |  F4  |  F5  |  F6  | ____ || ____ | v_MUTE| V_DN  | v_UP  | ____ |ZOOMOUT|
+			// | ____ | F12  |  F7  |  F8  |  F9  | ____ || ____ |lang_sw/|_THAI |  ____ | ____ | ____ |
 			// |---------------------------------------------------------------------------------------|
 			// | ____ | ____ | ____ | ____ | ____ | ____ || ____ | _____ | _____ | _____ | ____ | tog 4|
 			// ========================================================================================+	
 		bindings = <
 			&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans 		&trans &kp C_BKLT_TOG	&kp C_BRI_DN	&kp C_BRI_UP	&trans 		&kp LC(PLUS)
 			&trans 	&kp F11  &kp F4  &kp F5  &kp F6  &trans 		&trans &kp C_MUTE		&kp C_VOL_DN	&kp C_VOL_UP	&trans 		&kp LC(MINUS)
-			&trans 	&kp F12  &kp F7  &kp F8  &kp F9  &trans 		&trans &kp C_STOP		&kp C_PREV		&kp C_NEXT		&kp C_PP 	&trans
+			&trans 	&kp F12  &kp F7  &kp F8  &kp F9  &trans 		&trans &kp LS(RSHIFT)   &tog THAI		&trans			&trans 	&trans
 			&trans 	&trans 	 &trans  &trans  &trans  &trans 		&trans &trans &trans &trans &trans &tog GAME
 		>; 
 	};
