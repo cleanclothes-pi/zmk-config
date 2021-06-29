@@ -17,8 +17,9 @@
 #define NAV		3
 #define NUM		4
 #define NUMPAD	5
-#define EDIT	6
-#define CONTROL	7
+#define WM		6
+#define MEDIA	7
+#define CONTROL	8
 // define frequent key combinations
 #define COPY	LC(C)
 #define PASTE	LC(V)
@@ -39,6 +40,14 @@
 #define TH_LPAR LS(Z)
 #define TH_RPAR LS(X)
 #define TH_DQT	LS(W)
+
+// Window Manager Shortcuts
+#define WS_1	LG(N1)
+#define WS_2	LG(N2)
+#define WS_3	LG(N3)
+#define WS_4	LG(N4)
+#define WS_5	LG(N5)
+#define WS_6	LG(N6)
 
 / {
 	combos {
@@ -112,13 +121,13 @@
 				// |ESC/HOME|   A    |   R   |    S   |    T   |    G    ||     M   |     N    |    E    |    I    |    O    | '/END  |
 				// |    PW  |   Z    |   X,[ |   C,(  |   D {  |    V    ||     K   |    H }   |   , )   |    . ]  |    /    |   NW   |
 				// |------------------------------------------------------------------------------------------------------------------|
-		 		// |  D_PW  | tog NUM|  ____ | &thai |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |tog THAI | tog NAV |  D_NW  |
+		 		// |  D_PW  | tog NUM|  ____ | &thai |TAB/_WM  |SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |tog THAI | tog NAV |  D_NW  |
 				// ===================================================================================================================+
 			bindings = <
 				&kp CAPS		&kp	Q		 &kp W 		  &kp F 		  		&kp P 	   	 &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &cht COLON SEMI	&kp MINUS
 				&cht1 HOME ESC  &hm2 LALT A  &hm LGUI R   &hm1 LSHFT S 			&hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   		&cht1 END SQT
 				&kp PW    		&kp Z		 &cht1 LBKT X  &cht1 LPAR C  		&cht1 LBRC D  &kp V  				&kp K      	&cht1 RBRC H		 &cht1 RPAR COMMA  &cht1 RBKT DOT &cht QMARK FSLH &kp NW
-				&kp D_PW 		&tog NUM	 &trans  &thai LS(CAPS) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL  &trans  &tog NAV 			&kp D_NW
+				&kp D_PW 		&tog NUM	 &trans  &thai LS(CAPS) THAI  &lt WM TAB &lt NAV SPACE			&lt NUM BSPC &lt MEDIA RET &kp DEL  &mo CONTROL &tog NAV 			&kp D_NW
 			>;
 		};
 
@@ -129,13 +138,13 @@
 				// |   ESC  |  ม/ผ   |  ง/พ  |   ก/ช  |   น/ถ  |   ส/ึ   ||   ้/โ   |   ่ / ุ   |   า/ ู   |   ร/ใ   |   ว/ ำ  |   ไ/ฆ  |
 				// |    PW  |  บ/ฟ   |  ต/ฒ  |   ค/ศ  |   ล/ญ  |   ห/ฉ  ||   ะ/ฝ   |  เ / ณ   |   อ/ซ   |   ื /ฑ |    แ/ ๋  |   NW   |
 				// |------------------------------------------------------------------------------------------------------------------|
-		 		// |  D_PW  | tog NUM|  ____ | &thai |TAB/_EDIT|SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |tog THAI | tog NAV |  D_NW  |
+		 		// |  D_PW  | tog NUM|  ____ | &thai |TAB/_WM  |SPC/_NAV || BSPC/_NUM| RET/_CONTR|  DEL  |tog THAI | tog NAV |  D_NW  |
 				// ===================================================================================================================+
 			bindings = <
 				&kp EQUAL	   &cht LS(A) MINUS &cht Q X          &cht LS(T) M   &cht LS(K) F    &cht LS(V) N0       &cht LS(E) B    &cht LS(LBKT) Y &cht N4 P       &cht LS(D) U &cht LS(U) LS(H) &cht1 LS(DOT) LS(N)
 				&cht1 HOME ESC &cht Z COMMA     &cht R SQT        &cht EQUAL D   &cht N5 O       &cht N7 L           &cht LS(F) H    &cht N6 J       &cht LS(N6) K   &cht E I     &cht DOT SEMI    &cht LS(S) W 
 				&kp PW         &cht A LBKT      &cht LS(COMMA) N9 &cht LS(L) N8  &cht LS(P) RBKT &cht LS(C) S		 &cht FSLH T     &cht LS(I) G    &cht LS(SEMI) V &cht LS(R) N &cht LS(J) C     &kp NW
-				&kp D_PW 	   &tog NUM	        &trans	    &thai LS(CAPS) THAI  &lt EDIT TAB    &lt NAV SPACE	     &lt NUMPAD BSPC &lt CONTROL RET &kp DEL         &trans       &tog NAV      &kp D_NW
+				&kp D_PW 	   &tog NUM	        &trans	    &thai LS(CAPS) THAI  &lt WM TAB      &lt NAV SPACE	     &lt NUMPAD BSPC &lt CONTROL RET &kp DEL         &trans       &tog NAV      &kp D_NW
 			>;
 	};
 
@@ -152,14 +161,14 @@
 	// [3] NAVIGATION = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
     nav {
 			// ---------------------------------------------------------------------------------------------------+
-			// |  ____ |  SAVE  |  APP  |  DEL  |  RET  |  PG_T || PG_UP |  ____ |  ____ |  ____ |  ____ |  ____  |
+			// |  ____ |  SAVE  | BSPC  |  DEL  |  RET  |  PG_T || PG_UP |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// |RENAM/HOME|S_ALL|  CUT  |  COPY | PASTE |  PG_B || PG_DN |  LEFT |  DOWN |   UP  | RIGHT |  ____  |
 			// |  ____ |  UNDO  |  REDO |  ____ |  K_APP|  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// |--------------------------------------------------------------------------------------------------|
 			// |  ____ |  ____  |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ===================================================================================================+
 			bindings = <
-				&trans		 &kp SAVE	&kp K_APP 	 &kp DEL 			&kp RET  		&kp PG_T					&kp PG_UP	&trans	 &trans		&trans	&trans		&trans
+				&trans		 &kp SAVE	&kp BSPC  	 &kp DEL 			&kp RET  		&kp PG_T					&kp PG_UP	&trans	 &trans		&trans	&trans		&trans
 				&cht HOME F2 &hm LALT S_ALL	&hm LGUI CUT &hm1 LSHFT COPY	&hm LCTRL PASTE	&kp PG_B					&kp PG_DN	&kp LEFT &kp DOWN	&kp UP	&kp RIGHT	&trans
 				&trans 		 &kp UNDO	&kp REDO  	 &trans				&kp K_APP		&trans						&trans		&trans	 &trans		&trans	&trans		&trans
 				&kp D_PW 	&tog NUM	 &trans  &thai LA(CAPS) THAI  &lt EDIT TAB &lt NAV SPACE			&lt NUM BSPC &lt CONTROL RET &kp DEL  &trans  &tog NAV 			&kp D_NW
@@ -200,26 +209,49 @@
 			>;
     }; 
 
-	// [6] EDIT = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-	edit {
+	// [6] WM = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+	wm {
+			// TODO:
+			//   - list all window manager shortcut keys
+			//   - assign place
 			// --------------------------------------------------------------------------------------------------+
-			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |   F1  |  F2   |   F3  |  F10  |  ____  |
-			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |   F4  |  F5   |   F6  |  F11  |  ____  |
-			// |  ____ |  SAVE |  BOLD |  ITAL |  UNDL |  ____ ||  ____ |   F7  |  F8   |   F9  |  F12  |  ____  |
+			// |  ____ |  ____ |scrn_l |clnt_up|scrn_r |  ____ ||  ____ | WS_1  | WS_2  | WS_3  | ____  |  ____  |
+			// |  ____ |width+ |  ws_l |clnt_dn| ws_r  |width- ||  ____ | WS_4  | WS_5  | WS_6  | ____  |  ____  |
+			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ | ____  | ____  | ____  | ____  |  ____  |
 			// |-------------------------------------------------------------------------------------------------|
 			// |  ____ |  ____ |  ____ |  ____ |  ____ |  ____ ||  ____ |  ____ |  ____ |  ____ |  ____ |  ____  |
 			// ==================================================================================================+			
 			bindings = <
-				&trans	&trans		&trans		&trans		&trans		&trans						&trans	&kp F1	&kp F2	&kp F3	&kp F10	&trans
-				&trans	&trans		&trans		&trans		&trans		&trans						&trans	&kp F4	&kp F5	&kp F6	&kp F11	&trans
-				&trans	&kp SAVE	&kp LC(B)	&kp LC(I)	&kp LC(U)	&trans						&trans	&kp F7	&kp F8	&kp F9	&kp F12	&trans
+				&trans	&trans		&kp LG(LC(J)) &kp LC(K) &LG(LC(K))	  &trans					&trans	&kp WS_1 &kp WS_2 &kp WS_3 &trans &trans
+				&trans	&kp LG(H) &kp LG(LEFT) &ht LSHFT LC(J)	&ht LCTRL LG(RIGHT) &kp LG(L)		&trans	&ht LCTRL WS_4 &ht LSHFT WS_5 &kp WS_6 &trans &trans
+				&trans	&trans      &trans      &trans		&kp LC(Q)	&trans						&trans	&trans 	&trans  &trans  &trans	&trans
 				&trans	&trans		&trans		&trans		&trans		&trans						&trans	&trans	&trans	&trans	&trans	&trans
 
 			>;
 	};
 
 	// [7] CONTROL = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+	media {
+			// TODO:
+			//   
+			// -------------------------------------------------------------------------------------------+
+			// |BOOTLD| ____ |  F1  |  F2  |  F3  | F10  || ____ | B_TOG | B_DN  | B_UP  | ____ |ZOOMIN|
+			// |RESET | ____ |  F4  |  F5  |  F6  | F11  || ____ | v_MUTE| V_DN  | v_UP  | ____ |ZOOMOUT|
+			// |BT_CLR| ____ |  F7  |  F8  |  F9  | F12  || ____ | M_STOP| M_PRV | M_NXT | M_PP | ____ |
+			// |---------------------------------------------------------------------------------------|
+			// | ____ | ____ | ____ | ____ | ____ | ____ || ____ | _____ | _____ | _____ | ____ | tog 4|
+			// ========================================================================================+	
+		bindings = <
+			&trans 		&kp    	&kp F1 		 &kp F2 	  &kp F3       &trans 		&trans &kp C_BKLT_TOG	&kp C_BRI_DN	&kp C_BRI_UP	&trans 		&kp LC(PLUS)
+			&trans 		&kp    	&kp F4 		 &kp F5 	  &kp F6       &trans 		&trans &kp C_MUTE		&kp C_VOL_DN	&kp C_VOL_UP	&trans 		&kp LC(MINUS)
+			&trans 		&kp    	&kp F7 		 &kp F8 	  &kp F9       &trans 		&trans &kp C_STOP		&kp C_PREV		&kp C_NEXT		&kp C_PP 	&trans
+			&trans 		&trans 	&trans 		 &trans 	  &trans       &trans 		&trans &trans &trans &trans &trans &tog GAME
+		>; 
+	};
+	// [8] CONTROL = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 	control {
+			// TODO:
+			//   - delet media keys, use this for only bluetooth
 			// ----------------------------------------------------------------------------------------+
 			// |BOOTLD| ____ | prof1| prof2| prof3| ____ || ____ | B_TOG | B_DN  | B_UP  | ____ |ZOOMIN|
 			// |RESET | ____ | prof4| prof5| ____ | ____ || ____ | v_MUTE| V_DN  | v_UP  | ____ |ZOOMOUT|
@@ -244,5 +276,4 @@ TODO:
 	- move F-keys to _CONTR layer on left hand
 	- add OSinput switch for Linux
 	- assign sticky key for bluetooth and OSinput/lang switch on bottom row
-	- move S_ALL and UNDO keys
 */
