@@ -223,7 +223,7 @@
 			bindings = <
 				&trans	&trans		&kp LG(LC(J)) &kp LG(K) &kp LG(LC(K))	  &trans				&trans	&kp WS_1 &kp WS_2 &kp WS_3 &trans &trans
 				&trans	&kp LG(H) &kp LG(LEFT) &hm LSHFT LG(J)	&hm LCTRL LG(RIGHT) &kp LG(L)		&trans	&hm LCTRL WS_4 &hm LSHFT WS_5 &kp WS_6 &trans &trans
-				&trans	&trans      &trans      &trans		&kp LC(Q)	&trans						&trans	&trans 	&trans  &trans  &trans	&trans
+				&trans	&trans      &trans      &trans		&kp LG(Q)	&trans						&trans	&trans 	&trans  &trans  &trans	&trans
 				&trans	&trans		&trans		&trans		&trans		&trans						&trans	&trans	&trans	&trans	&trans	&trans
 
 			>;
