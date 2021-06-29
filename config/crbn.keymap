@@ -242,10 +242,10 @@
 			// | ____ | ____ | ____ | ____ | ____ | ____ || ____ | _____ | _____ | _____ | ____ | tog 4|
 			// ========================================================================================+	
 		bindings = <
-			&trans 		&kp    	&kp F1 		 &kp F2 	  &kp F3       &trans 		&trans &kp C_BKLT_TOG	&kp C_BRI_DN	&kp C_BRI_UP	&trans 		&kp LC(PLUS)
-			&trans 		&kp    	&kp F4 		 &kp F5 	  &kp F6       &trans 		&trans &kp C_MUTE		&kp C_VOL_DN	&kp C_VOL_UP	&trans 		&kp LC(MINUS)
-			&trans 		&kp    	&kp F7 		 &kp F8 	  &kp F9       &trans 		&trans &kp C_STOP		&kp C_PREV		&kp C_NEXT		&kp C_PP 	&trans
-			&trans 		&trans 	&trans 		 &trans 	  &trans       &trans 		&trans &trans &trans &trans &trans &tog GAME
+			&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans 		&trans &kp C_BKLT_TOG	&kp C_BRI_DN	&kp C_BRI_UP	&trans 		&kp LC(PLUS)
+			&trans 	&kp F11  &kp F4  &kp F5  &kp F6  &trans 		&trans &kp C_MUTE		&kp C_VOL_DN	&kp C_VOL_UP	&trans 		&kp LC(MINUS)
+			&trans 	&kp F12  &kp F7  &kp F8  &kp F9  &trans 		&trans &kp C_STOP		&kp C_PREV		&kp C_NEXT		&kp C_PP 	&trans
+			&trans 	&trans 	 &trans  &trans  &trans  &trans 		&trans &trans &trans &trans &trans &tog GAME
 		>; 
 	};
 	// [8] CONTROL = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
