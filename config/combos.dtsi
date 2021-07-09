@@ -23,5 +23,6 @@ COMBO(paste, &kp LC(V), 26 27 28, DEFAULT THAI)
 COMBO(select_all, &kp LC(A), 20 23, DEFAULT THAI)
 
 //ported from main
-COMBO(one_shift, &sk LSHIFT, 41 42, 0) 
+COMBO(oneshot_shift, &sk LSHFT, 41 42, 0) 
 COMBO(lang_toggle, &macro_lang, 31 32, 0 1)
+
