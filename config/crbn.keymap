@@ -53,10 +53,15 @@
 	combos {
 		compatible = "zmk,combos";
 		combo_shift {
-        key-positions = <41 42>;
-        bindings = <&sk LSHFT>;
-		layers = < 0 >;
+			key-positions = <41 42>;
+			bindings = <&sk LSHFT>;
+			layers = < 0 >;
       	};
+		thai_tog {
+			key-positions = <31 32>;
+			bindings = < &macro_lang >;
+			layers = < DEFAULT THAI >;
+		};
 	};
 
 	behaviors {
@@ -108,6 +113,37 @@
 			flavor = "balanced";
 			bindings = <&kp>, <&tog>;
 		};
+		// Mod-morph
+		dot_excl: dot_excl {
+		  compatible = "zmk,behavior-mod-morph";
+		  label = "dot_excl";
+		  #binding-cells = <0>;
+		  bindings = <&kp DOT>, <&kp EXCL>;
+		  mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+
+		com_qmark: com_qmark {
+		  compatible = "zmk,behavior-mod-morph";
+		  label = "com_qmark";
+		  #binding-cells = <0>;
+		  bindings = <&kp COMMA>, <&kp QMARK>;
+		  mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+
+		slash_at: slash_at {
+		  compatible = "zmk,behavior-mod-morph";
+		  label = "slash_at";
+		  #binding-cells = <0>;
+		  bindings = <&kp SLASH>, <&kp AT>;
+		  mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+		// Macros
+		macro_lang: macro_lang {
+			compatible = "zmk,behavior-macro";
+			label = "macro_lang";
+			#binding-cells = <0>;
+			bindings = <&kp RA(SPACE)>, <&tog THAI>;
+		};
 	};
 
 	keymap {
@@ -127,7 +163,7 @@
 				&kp CAPS		&kp	Q		 &kp W 		  &kp F 		  		&kp P 	   	 &kp B  				&kp J		&kp L			 &kp U     		&kp Y    	 &cht COLON SEMI	&kp MINUS
 				&cht1 HOME ESC  &hm2 LALT A  &hm LGUI R   &hm1 LSHFT S 			&hm LCTRL T  &kp G  				&kp M  		&hm LCTRL N 	 &hm1 LSHFT E   &hm2 LGUI I  &hm LALT O   		&cht1 END SQT
 				&kp PW    		&kp Z		 &cht1 LBKT X  &cht1 LPAR C  		&cht1 LBRC D  &kp V  				&kp K      	&cht1 RBRC H		 &cht1 RPAR COMMA  &cht1 RBKT DOT &cht QMARK FSLH &kp NW
-				&kp D_PW 		&tog NUM	 &trans  &thai LS(CAPS) THAI  &lt WM TAB &lt NAV SPACE			&lt NUM BSPC &lt MEDIA RET &kp DEL  &mo CONTROL &tog NAV 			&kp D_NW
+				&kp D_PW 		&tog NUM	 &trans  &thai RA(SPACE) THAI  &lt WM TAB &lt NAV SPACE			&lt NUM BSPC &lt MEDIA RET &kp DEL  &mo CONTROL &tog NAV 			&kp D_NW
 			>;
 		};
 
