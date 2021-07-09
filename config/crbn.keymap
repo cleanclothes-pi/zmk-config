@@ -53,11 +53,11 @@
 	combos {
 		#include "combos.dtsi" 
 		/* compatible = "zmk,combos"; */
-		combo_shift {
-			key-positions = <41 42>;
-			bindings = <&sk LSHFT>;
-			layers = < 0 >;
-      	};
+		/* combo_shift { */
+		/* 	key-positions = <41 42>; */
+		/* 	bindings = <&sk LSHFT>; */
+		/* 	layers = < 0 >; */
+      	/* }; */
 		/* thai_tog { */
 		/* 	key-positions = <31 32>; */
 		/* 	bindings = < &macro_lang >; */
