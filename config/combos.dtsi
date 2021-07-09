@@ -16,11 +16,11 @@ compatible = "zmk,combos";
     layers = <LAYERS>; \
   };
 
-/* COMBO(undo, &kp LC(Z), 25 26, DEFAULT THAI) */
-/* COMBO(cut, &kp LC(X), 26 28, DEFAULT THAI) */
-/* COMBO(copy, &kp LC(C), 26 27, DEFAULT THAI) */
-/* COMBO(paste, &kp LC(V), 26 27 28, DEFAULT THAI) */
-/* COMBO(select_all, &kp LC(A), 20 23, DEFAULT THAI) */
+COMBO(undo, &kp LC(Z), 25 26, DEFAULT THAI)
+COMBO(cut, &kp LC(X), 26 28, DEFAULT THAI)
+COMBO(copy, &kp LC(C), 26 27, DEFAULT THAI)
+COMBO(paste, &kp LC(V), 26 27 28, DEFAULT THAI)
+COMBO(select_all, &kp LC(A), 20 23, DEFAULT THAI)
 
 //ported from main
 COMBO(one_shift, &sk LSHIFT, 41 42, 0) 
