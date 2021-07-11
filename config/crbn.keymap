@@ -52,12 +52,12 @@
 / {
 	combos {
 		#include "combos.dtsi" 
-		/* compatible = "zmk,combos"; */
-		/* combo_shift { */
-		/* 	key-positions = <41 42>; */
-		/* 	bindings = <&sk LSHFT>; */
-		/* 	layers = < 0 >; */
-      	/* }; */
+		 compatible = "zmk,combos"; 
+		 combo_shift { 
+		 	key-positions = <41 42>; 
+		 	bindings = <&sk LSHFT>; 
+		 	layers = < 0 >; 
+     	}; 
 		/* thai_tog { */
 		/* 	key-positions = <31 32>; */
 		/* 	bindings = < &macro_lang >; */
@@ -155,7 +155,7 @@
 			compatible = "zmk,behavior-macro";
 			label = "macro_cpyline";
 			#binding-cells = <0>;
-			bindings = <&kp LS(HOME)>, <&kp COPY>, <&kp END>;
+			bindings = <&kp LS(HOME)>, <&kp LC(C)>, <&kp END>;
 		};
 		} 
 		
