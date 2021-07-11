@@ -114,6 +114,7 @@
 			flavor = "balanced";
 			bindings = <&kp>, <&tog>;
 		};
+
 		// Mod-morph
 		dot_excl: dot_excl {
 		  compatible = "zmk,behavior-mod-morph";
@@ -122,7 +123,6 @@
 		  bindings = <&kp DOT>, <&kp EXCL>;
 		  mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-
 		com_qmark: com_qmark {
 		  compatible = "zmk,behavior-mod-morph";
 		  label = "com_qmark";
@@ -130,7 +130,6 @@
 		  bindings = <&kp COMMA>, <&kp QMARK>;
 		  mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-
 		slash_at: slash_at {
 		  compatible = "zmk,behavior-mod-morph";
 		  label = "slash_at";
@@ -138,6 +137,7 @@
 		  bindings = <&kp SLASH>, <&kp AT>;
 		  mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+
 		// Macros
 		macro_lang: macro_lang {
 			compatible = "zmk,behavior-macro";
@@ -145,8 +145,20 @@
 			#binding-cells = <0>;
 			bindings = <&kp RA(SPACE)>, <&tog THAI>;
 		};
-	};
-
+		macro_cutline: macro_cutline {
+			compatible = "zmk,behavior-macro";
+			label = "macro_cutline";
+			#binding-cells = <0>;
+			bindings = <&kp LS(HOME)>, <&kp CUT>;
+		};
+		macro_cpyline: macro_cpyline {
+			compatible = "zmk,behavior-macro";
+			label = "macro_cpyline";
+			#binding-cells = <0>;
+			bindings = <&kp LS(HOME)>, <&kp COPY>, <&kp END>;
+		};
+		} 
+		
 	keymap {
 		compatible = "zmk,keymap";
 

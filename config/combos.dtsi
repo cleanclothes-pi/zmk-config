@@ -20,9 +20,12 @@ COMBO(undo, &kp LC(Z), 25 26, DEFAULT THAI)
 COMBO(cut, &kp LC(X), 26 28, DEFAULT THAI)
 COMBO(copy, &kp LC(C), 26 27, DEFAULT THAI)
 COMBO(paste, &kp LC(V), 26 27 28, DEFAULT THAI)
-COMBO(select_all, &kp LC(A), 20 23, DEFAULT THAI)
+// COMBO(select_all, &kp LC(A), 20 23, DEFAULT THAI)
 
 //ported from main
 COMBO(oneshot_shift, &sk LSHFT, 41 42, 0) 
 COMBO(lang_toggle, &macro_lang, 31 32, 0 1)
 
+// macros NAV layer
+COMBO(, &macro_cutline, 14 15, NAV)
+COMBO(, &macro_cpyline, 15 16, NAV)
